@@ -59,6 +59,17 @@ const ComponentsColors = lazy(() => import('./Pages/Components/Colors'))
 const ComponentsIcons = lazy(() => import('./Pages/Components/Icons'))
 const ComponentsUtilities = lazy(() => import('./Pages/Components/Utilities'))
 
+const FormsBasic = lazy(() => import('./Pages/Forms/Basic'))
+const FormsPickers = lazy(() => import('./Pages/Forms/Pickers'))
+const FormsSelect = lazy(() => import('./Pages/Forms/Select'))
+const FormsValidation = lazy(() => import('./Pages/Forms/Validation'))
+const FormsWizard = lazy(() => import('./Pages/Forms/Wizard'))
+const FormsFileUploads = lazy(() => import('./Pages/Forms/FileUploads'))
+const FormsTextEditors = lazy(() => import('./Pages/Forms/TextEditors'))
+const FormsRangeSlider = lazy(() => import('./Pages/Forms/RangeSlider'))
+const FormsLayouts = lazy(() => import('./Pages/Forms/Layouts'))
+const FormsOther = lazy(() => import('./Pages/Forms/Other'))
+
 const InvoiceDetail = lazy(() => import('./Pages/Apps/InvoiceDetail'))
 const InvoiceCreate = lazy(() => import('./Pages/Apps/InvoiceCreate'))
 const Email = lazy(() => import('./Pages/Apps/Email'))
@@ -139,6 +150,16 @@ const INNER_ROUTES: Record<string, ComponentType> = {
   '/components/colors': ComponentsColors,
   '/components/icons': ComponentsIcons,
   '/components/utilities': ComponentsUtilities,
+  '/forms/basic': FormsBasic,
+  '/forms/pickers': FormsPickers,
+  '/forms/select': FormsSelect,
+  '/forms/validation': FormsValidation,
+  '/forms/wizard': FormsWizard,
+  '/forms/file-uploads': FormsFileUploads,
+  '/forms/text-editors': FormsTextEditors,
+  '/forms/range-slider': FormsRangeSlider,
+  '/forms/layouts': FormsLayouts,
+  '/forms/other': FormsOther,
 }
 
 const EXPLICIT = new Set<string>(['/', '/apps/invoices/INV-2010', ...Object.keys(INNER_ROUTES)])
