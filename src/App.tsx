@@ -50,6 +50,15 @@ const ContentTimeline = lazy(() => import('./Pages/Content/Timeline'))
 const SearchResults = lazy(() => import('./Pages/Content/SearchResults'))
 const Regions = lazy(() => import('./Pages/Content/Regions'))
 
+const ComponentGalleryIndex = lazy(() => import('./Pages/Components/ComponentGalleryIndex'))
+const ComponentGalleryDetail = lazy(() => import('./Pages/Components/ComponentGalleryDetail'))
+const ComponentsGrid = lazy(() => import('./Pages/Components/Grid'))
+const ComponentsListGroup = lazy(() => import('./Pages/Components/ListGroup'))
+const ComponentsTypography = lazy(() => import('./Pages/Components/Typography'))
+const ComponentsColors = lazy(() => import('./Pages/Components/Colors'))
+const ComponentsIcons = lazy(() => import('./Pages/Components/Icons'))
+const ComponentsUtilities = lazy(() => import('./Pages/Components/Utilities'))
+
 const InvoiceDetail = lazy(() => import('./Pages/Apps/InvoiceDetail'))
 const InvoiceCreate = lazy(() => import('./Pages/Apps/InvoiceCreate'))
 const Email = lazy(() => import('./Pages/Apps/Email'))
@@ -123,13 +132,25 @@ const INNER_ROUTES: Record<string, ComponentType> = {
   '/apps/outlook': Outlook,
   '/apps/manage': ManageApps,
   '/apps/invoices/new': InvoiceCreate,
+  '/components': ComponentGalleryIndex,
+  '/components/grid': ComponentsGrid,
+  '/components/nav': ComponentsListGroup,
+  '/components/typography': ComponentsTypography,
+  '/components/colors': ComponentsColors,
+  '/components/icons': ComponentsIcons,
+  '/components/utilities': ComponentsUtilities,
 }
 
 const EXPLICIT = new Set<string>(['/', '/apps/invoices/INV-2010', ...Object.keys(INNER_ROUTES)])
 const CONFIGURED = new Set<string>([...listRoutePaths])
 
 const shellRoutes = NAV_ROUTES.filter(
-  (p) => !EXPLICIT.has(p) && !CONFIGURED.has(p) && !AUTH_ROUTES[p] && !ERROR_ROUTES[p],
+  (p) =>
+    !EXPLICIT.has(p) &&
+    !CONFIGURED.has(p) &&
+    !AUTH_ROUTES[p] &&
+    !ERROR_ROUTES[p] &&
+    !p.startsWith('/components/'), // handled by the dynamic /components/:slug gallery route
 )
 
 function PageFallback() {
@@ -159,6 +180,7 @@ export default function App() {
             ))}
             {listRoutes}
             <Route path="/apps/invoices/:id" element={<InvoiceDetail />} />
+            <Route path="/components/:slug" element={<ComponentGalleryDetail />} />
             {shellRoutes.map((path) => (
               <Route key={path} path={path} element={<ComingSoon />} />
             ))}
