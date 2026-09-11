@@ -21,6 +21,42 @@ const Error400 = lazy(() => import('./Pages/Errors/Error400'))
 const Error404 = lazy(() => import('./Pages/Errors/Error404'))
 const Maintenance = lazy(() => import('./Pages/Errors/Maintenance'))
 
+const LineArea = lazy(() => import('./Pages/Charts/LineArea'))
+const BarColumn = lazy(() => import('./Pages/Charts/BarColumn'))
+const Distributions = lazy(() => import('./Pages/Charts/Distributions'))
+const Comparisons = lazy(() => import('./Pages/Charts/Comparisons'))
+const Heatmap = lazy(() => import('./Pages/Charts/Heatmap'))
+const Sparklines = lazy(() => import('./Pages/Charts/Sparklines'))
+
+const StaticTables = lazy(() => import('./Pages/Tables/Static'))
+const CustomTables = lazy(() => import('./Pages/Tables/Custom'))
+const AdvancedTable = lazy(() => import('./Pages/Tables/Advanced'))
+
+const Scrollable = lazy(() => import('./Pages/Layouts/Scrollable'))
+const Compact = lazy(() => import('./Pages/Layouts/Compact'))
+const Boxed = lazy(() => import('./Pages/Layouts/Boxed'))
+const Horizontal = lazy(() => import('./Pages/Layouts/Horizontal'))
+const Preloader = lazy(() => import('./Pages/Layouts/Preloader'))
+const SidebarDark = lazy(() => import('./Pages/Layouts/SidebarDark'))
+const SidebarGray = lazy(() => import('./Pages/Layouts/SidebarGray'))
+const SidebarHover = lazy(() => import('./Pages/Layouts/SidebarHover'))
+const TopbarDark = lazy(() => import('./Pages/Layouts/TopbarDark'))
+const TopbarGray = lazy(() => import('./Pages/Layouts/TopbarGray'))
+
+const Faq = lazy(() => import('./Pages/Content/Faq'))
+const Pricing = lazy(() => import('./Pages/Content/Pricing'))
+const EmptyPage = lazy(() => import('./Pages/Content/Empty'))
+const ContentTimeline = lazy(() => import('./Pages/Content/Timeline'))
+const SearchResults = lazy(() => import('./Pages/Content/SearchResults'))
+const Regions = lazy(() => import('./Pages/Content/Regions'))
+
+const Sortable = lazy(() => import('./Pages/Plugins/Sortable'))
+const I18n = lazy(() => import('./Pages/Plugins/I18n'))
+const SweetAlerts = lazy(() => import('./Pages/Plugins/SweetAlerts'))
+const Clipboard = lazy(() => import('./Pages/Plugins/Clipboard'))
+const Tour = lazy(() => import('./Pages/Plugins/Tour'))
+const VideoPlayer = lazy(() => import('./Pages/Plugins/VideoPlayer'))
+
 const AUTH_ROUTES: Record<string, ComponentType> = {
   '/auth/sign-in': SignIn,
   '/auth/sign-up': SignUp,
@@ -37,7 +73,41 @@ const ERROR_ROUTES: Record<string, ComponentType> = {
   '/error/maintenance': Maintenance,
 }
 
-const EXPLICIT = new Set<string>(['/'])
+const INNER_ROUTES: Record<string, ComponentType> = {
+  '/charts/line-area': LineArea,
+  '/charts/bar-column': BarColumn,
+  '/charts/distributions': Distributions,
+  '/charts/comparisons': Comparisons,
+  '/charts/heatmap': Heatmap,
+  '/charts/sparklines': Sparklines,
+  '/tables/static': StaticTables,
+  '/tables/custom': CustomTables,
+  '/tables/advanced': AdvancedTable,
+  '/layouts/scrollable': Scrollable,
+  '/layouts/compact': Compact,
+  '/layouts/boxed': Boxed,
+  '/layouts/horizontal': Horizontal,
+  '/layouts/preloader': Preloader,
+  '/layouts/sidebar-dark': SidebarDark,
+  '/layouts/sidebar-gray': SidebarGray,
+  '/layouts/sidebar-hover': SidebarHover,
+  '/layouts/topbar-dark': TopbarDark,
+  '/layouts/topbar-gray': TopbarGray,
+  '/pages/faq': Faq,
+  '/pages/pricing': Pricing,
+  '/pages/empty': EmptyPage,
+  '/pages/timeline': ContentTimeline,
+  '/pages/search-results': SearchResults,
+  '/pages/regions': Regions,
+  '/plugins/sortable': Sortable,
+  '/plugins/i18n': I18n,
+  '/plugins/alerts': SweetAlerts,
+  '/plugins/clipboard': Clipboard,
+  '/plugins/tour': Tour,
+  '/plugins/video-player': VideoPlayer,
+}
+
+const EXPLICIT = new Set<string>(['/', ...Object.keys(INNER_ROUTES)])
 const CONFIGURED = new Set<string>([...listRoutePaths])
 
 const shellRoutes = NAV_ROUTES.filter(
@@ -66,6 +136,9 @@ export default function App() {
 
           <Route element={<InnerTemplate />}>
             <Route path="/" element={<DefaultDashboard />} />
+            {Object.entries(INNER_ROUTES).map(([path, Component]) => (
+              <Route key={path} path={path} element={<Component />} />
+            ))}
             {listRoutes}
             {shellRoutes.map((path) => (
               <Route key={path} path={path} element={<ComingSoon />} />
