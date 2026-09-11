@@ -50,6 +50,15 @@ const ContentTimeline = lazy(() => import('./Pages/Content/Timeline'))
 const SearchResults = lazy(() => import('./Pages/Content/SearchResults'))
 const Regions = lazy(() => import('./Pages/Content/Regions'))
 
+const InvoiceDetail = lazy(() => import('./Pages/Apps/InvoiceDetail'))
+const InvoiceCreate = lazy(() => import('./Pages/Apps/InvoiceCreate'))
+const Email = lazy(() => import('./Pages/Apps/Email'))
+const Chat = lazy(() => import('./Pages/Apps/Chat'))
+const AppCalendar = lazy(() => import('./Pages/Apps/Calendar'))
+const TeamBoard = lazy(() => import('./Pages/Apps/TeamBoard'))
+const Outlook = lazy(() => import('./Pages/Apps/Outlook'))
+const ManageApps = lazy(() => import('./Pages/Apps/ManageApps'))
+
 const Sortable = lazy(() => import('./Pages/Plugins/Sortable'))
 const I18n = lazy(() => import('./Pages/Plugins/I18n'))
 const SweetAlerts = lazy(() => import('./Pages/Plugins/SweetAlerts'))
@@ -105,9 +114,18 @@ const INNER_ROUTES: Record<string, ComponentType> = {
   '/plugins/clipboard': Clipboard,
   '/plugins/tour': Tour,
   '/plugins/video-player': VideoPlayer,
+  '/apps/email/inbox': Email,
+  '/apps/email/inbox/1': Email,
+  '/apps/email/compose': Email,
+  '/apps/chat': Chat,
+  '/apps/calendar': AppCalendar,
+  '/apps/team-board': TeamBoard,
+  '/apps/outlook': Outlook,
+  '/apps/manage': ManageApps,
+  '/apps/invoices/new': InvoiceCreate,
 }
 
-const EXPLICIT = new Set<string>(['/', ...Object.keys(INNER_ROUTES)])
+const EXPLICIT = new Set<string>(['/', '/apps/invoices/INV-2010', ...Object.keys(INNER_ROUTES)])
 const CONFIGURED = new Set<string>([...listRoutePaths])
 
 const shellRoutes = NAV_ROUTES.filter(
@@ -140,6 +158,7 @@ export default function App() {
               <Route key={path} path={path} element={<Component />} />
             ))}
             {listRoutes}
+            <Route path="/apps/invoices/:id" element={<InvoiceDetail />} />
             {shellRoutes.map((path) => (
               <Route key={path} path={path} element={<ComingSoon />} />
             ))}
