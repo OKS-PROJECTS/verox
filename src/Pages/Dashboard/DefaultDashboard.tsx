@@ -1,9 +1,8 @@
 import { Card, CardBody, CardHeader, Chart, Button, Table } from 'oks-ui'
 import { ShoppingBag, DollarSign, Users, Percent, Download, Upload, Globe } from 'lucide-react'
-import { ChartCard, DataTable, DonutCard, KpiCard, PageHeader } from '../../Components/ui'
+import { ChartCard, DataTable, KpiCard, PageHeader, RingGauge } from '../../Components/ui'
 import {
   ENGAGEMENT_TREND,
-  GOAL_ACHIEVEMENT,
   GOAL_TABLE,
   PAGE_ANALYTICS,
   PERFORMANCE_TREND,
@@ -79,9 +78,39 @@ export default function DefaultDashboard() {
           />
         </ChartCard>
 
-        <div className="flex flex-col gap-4">
-          <DonutCard title="Goal Achievement Metrics" centerLabel="Goals" data={GOAL_ACHIEVEMENT.map((g, i) => ({ label: g.label, value: g.value > 1000 ? Math.round(g.value / 1000) : g.value, color: g.color }))} height={140} />
-        </div>
+        <Card>
+          <CardHeader>
+            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+              Goal Achievement Metrics
+            </h3>
+          </CardHeader>
+          <CardBody className="pt-0">
+            <div className="mb-4 flex justify-center">
+              <RingGauge
+                diameter={150}
+                centerValue="83%"
+                centerLabel="Avg."
+                rings={[
+                  { label: 'Sales Target', value: 82, color: 'var(--oks-color-primary-500)', size: 150 },
+                  { label: 'Marketing Reach', value: 66, color: 'var(--oks-color-secondary-500)', size: 112 },
+                  { label: 'Support SLA', value: 91, color: 'var(--oks-color-success-500)', size: 74 },
+                ]}
+              />
+            </div>
+            <Table
+              aria-label="Goal detail"
+              removeWrapper
+              isCompact
+              getRowKey={(r) => r.goal}
+              rows={GOAL_TABLE}
+              columns={[
+                { key: 'goal', header: 'Goal' },
+                { key: 'completed', header: 'Completed' },
+                { key: 'target', header: 'Target' },
+              ]}
+            />
+          </CardBody>
+        </Card>
 
         <Card>
           <CardHeader className="flex items-center gap-2">
@@ -149,26 +178,6 @@ export default function DefaultDashboard() {
           </CardBody>
         </Card>
       </div>
-
-      <Card className="mt-5">
-        <CardHeader>
-          <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
-            Goal Detail
-          </h3>
-        </CardHeader>
-        <CardBody className="overflow-x-auto pt-0">
-          <Table
-            aria-label="Goal detail"
-            getRowKey={(r) => r.goal}
-            rows={GOAL_TABLE}
-            columns={[
-              { key: 'goal', header: 'Goal' },
-              { key: 'completed', header: 'Completed' },
-              { key: 'target', header: 'Target' },
-            ]}
-          />
-        </CardBody>
-      </Card>
     </div>
   )
 }

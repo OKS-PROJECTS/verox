@@ -59,6 +59,7 @@ export interface PageAnalyticsRow {
   avgTime: string
   bounceRate: string
   conversionRate: string
+  [key: string]: unknown
 }
 
 export const PAGE_ANALYTICS: PageAnalyticsRow[] = [

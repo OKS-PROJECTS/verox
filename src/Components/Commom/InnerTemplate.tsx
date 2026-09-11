@@ -14,7 +14,6 @@ export function InnerTemplate() {
 
   useEffect(() => {
     mainRef.current?.scrollTo({ top: 0 })
-    setIsMobileNavOpen(false)
   }, [pathname])
 
   return (

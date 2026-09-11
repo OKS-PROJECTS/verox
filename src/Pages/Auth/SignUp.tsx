@@ -15,7 +15,7 @@ export default function SignUp() {
       >
         <FormFieldSet type="text" name="name" label="Full name" placeholder="Jordan Blake" validation={{ rules: { required: true } }} />
         <FormFieldSet type="email" name="email" label="Email address" placeholder="you@example.com" validation={{ rules: { required: true, email: true } }} />
-        <FormFieldSet type="password" name="password" label="Password" placeholder="Create a password" validation={{ rules: { required: true, strongPassword: true } }} />
+        <FormFieldSet type="password" name="password" label="Password" placeholder="Create a password" validation={{ rules: { required: true, strongPassword: {} } }} />
         <Button type="submit" color="primary" fullWidth>
           Create account
         </Button>

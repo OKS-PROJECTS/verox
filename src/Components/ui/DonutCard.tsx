@@ -4,6 +4,7 @@ export interface DonutDatum {
   label: string
   value: number
   color: string
+  [key: string]: unknown
 }
 
 interface DonutCardProps {

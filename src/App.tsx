@@ -4,6 +4,7 @@ import { Loader } from 'oks-ui'
 import { InnerTemplate } from './Components/Commom/InnerTemplate'
 import { ThemeSettingsProvider } from './lib/ThemeSettingsContext'
 import { NAV_ROUTES } from './data/nav'
+import { listRoutePaths, listRoutes } from './data/listRoutes'
 
 const ComingSoon = lazy(() => import('./Pages/ComingSoon'))
 const DefaultDashboard = lazy(() => import('./Pages/Dashboard/DefaultDashboard'))
@@ -37,7 +38,7 @@ const ERROR_ROUTES: Record<string, ComponentType> = {
 }
 
 const EXPLICIT = new Set<string>(['/'])
-const CONFIGURED = new Set<string>([])
+const CONFIGURED = new Set<string>([...listRoutePaths])
 
 const shellRoutes = NAV_ROUTES.filter(
   (p) => !EXPLICIT.has(p) && !CONFIGURED.has(p) && !AUTH_ROUTES[p] && !ERROR_ROUTES[p],
@@ -65,6 +66,7 @@ export default function App() {
 
           <Route element={<InnerTemplate />}>
             <Route path="/" element={<DefaultDashboard />} />
+            {listRoutes}
             {shellRoutes.map((path) => (
               <Route key={path} path={path} element={<ComingSoon />} />
             ))}

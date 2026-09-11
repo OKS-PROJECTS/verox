@@ -119,12 +119,12 @@ export function Header({ onOpenMobileNav, onOpenSettings }: HeaderProps) {
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Button isIconOnly variant="ghost" color="default" size="sm" aria-label="Notifications">
-              <Badge content={NOTIFICATIONS.length} color="danger" size="sm" shape="circle">
+              <Badge content={String(NOTIFICATIONS.length)} color="danger" size="sm" shape="circle">
                 <Bell size={18} />
               </Badge>
             </Button>
           </DropdownTrigger>
-          <DropdownMenu aria-label="Notifications" className="w-80">
+          <DropdownMenu aria-label="Notifications" classNames={{ base: 'w-80' }}>
             <DropdownSection title={`${NOTIFICATIONS.length} new notifications`}>
               {NOTIFICATIONS.map((n) => (
                 <DropdownItem key={n.id} title={n.title} description={n.detail} showDivider />

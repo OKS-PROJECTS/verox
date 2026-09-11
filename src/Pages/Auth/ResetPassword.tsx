@@ -5,7 +5,7 @@ import { AuthLayout } from './AuthLayout'
 export default function ResetPassword() {
   return (
     <AuthLayout title="Reset your password" subtitle="Enter your email and we'll send you a reset link.">
-      <Form className="flex flex-col gap-4" onSubmit={() => toast.success('Reset link sent')}>
+      <Form className="flex flex-col gap-4" onSubmit={() => { toast.success('Reset link sent') }}>
         <FormFieldSet type="email" name="email" label="Email address" placeholder="you@example.com" validation={{ rules: { required: true, email: true } }} />
         <Button type="submit" color="primary" fullWidth>
           Send reset link
