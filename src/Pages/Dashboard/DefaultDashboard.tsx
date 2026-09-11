@@ -20,7 +20,7 @@ export default function DefaultDashboard() {
       />
 
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_2fr]">
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-1">
+        <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-1">
           <KpiCard label="Total Orders" value="687.30k" delta="5.42%" trend="up" help="Since last month" icon={<ShoppingBag size={18} />} tone="primary" />
           <KpiCard label="Total Revenue" value="$2.50M" delta="8.76%" trend="up" help="Since last month" icon={<DollarSign size={18} />} tone="success" />
           <KpiCard label="Active Customers" value="54.60k" delta="2.13%" trend="down" help="Since last month" icon={<Users size={18} />} tone="warning" />
@@ -41,22 +41,53 @@ export default function DefaultDashboard() {
             </div>
           }
         >
-          <Chart
-            type="area"
-            data={PERFORMANCE_TREND}
-            x="month"
-            series={[
-              { key: 'websiteTraffic', name: 'Website Traffic', color: 'var(--oks-color-primary-500)' },
-              { key: 'activeUsers', name: 'Active Users', color: 'var(--oks-color-secondary-500)' },
-              { key: 'conversionRate', name: 'Conversion Rate', color: 'var(--oks-color-success-500)' },
-              { key: 'revenueGrowth', name: 'Revenue Growth', color: 'var(--oks-color-warning-600)' },
-            ]}
-            height={300}
-            unstyled
-            legend
-            line={{ curve: 'smooth' }}
-            grid={{ horizontal: true }}
-          />
+          <div className="relative">
+            <Chart
+              type="column"
+              data={PERFORMANCE_TREND}
+              x="month"
+              series={[{ key: 'websiteTraffic', name: 'Website Traffic', color: 'var(--oks-color-primary-300)' }]}
+              height={260}
+              unstyled
+              grid={{ horizontal: true }}
+              padding={{ top: 8, right: 12, bottom: 24, left: 40 }}
+              column={{ radius: 3, width: 14 }}
+            />
+            <div className="pointer-events-none absolute inset-0">
+              <Chart
+                type="line"
+                data={PERFORMANCE_TREND}
+                x="month"
+                series={[
+                  { key: 'activeUsers', name: 'Active Users', color: 'var(--oks-color-secondary-500)' },
+                  { key: 'conversionRate', name: 'Conversion Rate', color: 'var(--oks-color-success-500)' },
+                  { key: 'revenueGrowth', name: 'Revenue Growth', color: 'var(--oks-color-warning-600)' },
+                ]}
+                height={260}
+                unstyled
+                background="transparent"
+                legend={false}
+                axisX={{ hide: true }}
+                axisY={{ hide: true }}
+                grid={{ horizontal: false }}
+                padding={{ top: 8, right: 12, bottom: 24, left: 40 }}
+                line={{ curve: 'smooth', strokeWidth: 2 }}
+              />
+            </div>
+          </div>
+          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[12px]" style={{ color: 'var(--app-fg-muted)' }}>
+            {[
+              { label: 'Website Traffic', color: 'var(--oks-color-primary-300)' },
+              { label: 'Active Users', color: 'var(--oks-color-secondary-500)' },
+              { label: 'Conversion Rate', color: 'var(--oks-color-success-500)' },
+              { label: 'Revenue Growth', color: 'var(--oks-color-warning-600)' },
+            ].map((l) => (
+              <span key={l.label} className="flex items-center gap-1.5">
+                <span className="h-2 w-2 rounded-full" style={{ background: l.color }} />
+                {l.label}
+              </span>
+            ))}
+          </div>
         </ChartCard>
       </div>
 

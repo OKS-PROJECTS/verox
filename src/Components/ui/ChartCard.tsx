@@ -16,8 +16,8 @@ interface ChartCardProps {
 export function ChartCard({ title, subtitle, actions, children, className }: ChartCardProps) {
   return (
     <Card className={className}>
-      <CardHeader className="flex items-start justify-between gap-3">
-        <div>
+      <CardHeader className="flex flex-col items-start justify-between gap-3 sm:flex-row">
+        <div className="min-w-0">
           <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
             {title}
           </h3>
@@ -27,7 +27,7 @@ export function ChartCard({ title, subtitle, actions, children, className }: Cha
             </p>
           )}
         </div>
-        {actions}
+        {actions && <div className="shrink-0">{actions}</div>}
       </CardHeader>
       <CardBody className="pt-0">{children}</CardBody>
     </Card>
