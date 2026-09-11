@@ -1,0 +1,332 @@
+/*
+ * Verox design tokens.
+ * Brand ramp ported from the reference's primary (#3F72AF) + semantic roles
+ * from its captured computed styles. The --app-* layer underneath is what
+ * every composed ui/ component reads, so light/dark flip together.
+ */
+
+:root {
+  /* ---- font ---- */
+  --oks-font-sans: 'Plus Jakarta Sans', 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --app-font-heading: 'Hanken Grotesk', var(--oks-font-sans);
+
+  /* ---- brand ramp (around reference primary #3F72AF) ---- */
+  --oks-palette-brand-50: #eff4fa;
+  --oks-palette-brand-100: #dce7f3;
+  --oks-palette-brand-200: #bbd2e8;
+  --oks-palette-brand-300: #93b7d9;
+  --oks-palette-brand-400: #6996c5;
+  --oks-palette-brand-500: #3f72af;
+  --oks-palette-brand-600: #335d91;
+  --oks-palette-brand-700: #2a4b76;
+  --oks-palette-brand-800: #243f61;
+  --oks-palette-brand-900: #203653;
+  --oks-palette-brand-950: #142236;
+
+  --oks-color-primary-50: var(--oks-palette-brand-50);
+  --oks-color-primary-100: var(--oks-palette-brand-100);
+  --oks-color-primary-200: var(--oks-palette-brand-200);
+  --oks-color-primary-300: var(--oks-palette-brand-300);
+  --oks-color-primary-400: var(--oks-palette-brand-400);
+  --oks-color-primary-500: var(--oks-palette-brand-500);
+  --oks-color-primary-600: var(--oks-palette-brand-600);
+  --oks-color-primary-700: var(--oks-palette-brand-700);
+  --oks-color-primary-800: var(--oks-palette-brand-800);
+  --oks-color-primary-900: var(--oks-palette-brand-900);
+  --oks-color-primary-950: var(--oks-palette-brand-950);
+
+  /* ---- secondary (periwinkle #7286D3) ---- */
+  --oks-color-secondary-50: #f1f3fc;
+  --oks-color-secondary-100: #e1e6f8;
+  --oks-color-secondary-200: #c5cef1;
+  --oks-color-secondary-300: #a2afe7;
+  --oks-color-secondary-400: #8c9bdd;
+  --oks-color-secondary-500: #7286d3;
+  --oks-color-secondary-600: #5b6bb8;
+  --oks-color-secondary-700: #4a5697;
+  --oks-color-secondary-800: #3d477a;
+  --oks-color-secondary-900: #343d63;
+  --oks-color-secondary-950: #212642;
+
+  /* ---- success (#63A361) ---- */
+  --oks-color-success-50: #f1f8f0;
+  --oks-color-success-100: #dfeedd;
+  --oks-color-success-200: #c0debc;
+  --oks-color-success-300: #9bca96;
+  --oks-color-success-400: #7eb878;
+  --oks-color-success-500: #63a361;
+  --oks-color-success-600: #4e8a4c;
+  --oks-color-success-700: #406f3e;
+  --oks-color-success-800: #365935;
+  --oks-color-success-900: #2d492d;
+  --oks-color-success-950: #172717;
+
+  /* ---- warning (#FFC26F) ---- */
+  --oks-color-warning-50: #fff8ee;
+  --oks-color-warning-100: #feedd3;
+  --oks-color-warning-200: #fdd8a5;
+  --oks-color-warning-300: #fcc077;
+  --oks-color-warning-400: #ffc98a;
+  --oks-color-warning-500: #ffc26f;
+  --oks-color-warning-600: #f2a63d;
+  --oks-color-warning-700: #cb8228;
+  --oks-color-warning-800: #a3671f;
+  --oks-color-warning-900: #7a4e18;
+  --oks-color-warning-950: #422a0c;
+
+  /* ---- danger (#FC5185) ---- */
+  --oks-color-danger-50: #fff0f4;
+  --oks-color-danger-100: #ffdce6;
+  --oks-color-danger-200: #feb9d0;
+  --oks-color-danger-300: #fe8eb3;
+  --oks-color-danger-400: #fd6c9c;
+  --oks-color-danger-500: #fc5185;
+  --oks-color-danger-600: #e22f67;
+  --oks-color-danger-700: #bc2555;
+  --oks-color-danger-800: #942047;
+  --oks-color-danger-900: #7a1e3f;
+  --oks-color-danger-950: #440d20;
+
+  /* ---- info (#3FC1C9) ---- */
+  --oks-color-info-50: #eefbfc;
+  --oks-color-info-100: #d3f3f5;
+  --oks-color-info-200: #a9e7ea;
+  --oks-color-info-300: #74d7dc;
+  --oks-color-info-400: #4bcbd1;
+  --oks-color-info-500: #3fc1c9;
+  --oks-color-info-600: #2c9ca3;
+  --oks-color-info-700: #257d83;
+  --oks-color-info-800: #216469;
+  --oks-color-info-900: #1f5257;
+  --oks-color-info-950: #0e2f33;
+
+  /* ---- neutral / default (chrome: Tabs solid track, Nav, dropdown, etc.) ---- */
+  --oks-color-default-50: #f9f9fa;
+  --oks-color-default-100: #f1f1f3;
+  --oks-color-default-200: #e5e6e7;
+  --oks-color-default-300: #d4d5d8;
+  --oks-color-default-400: #abaeb4;
+  --oks-color-default-500: #82868f;
+  --oks-color-default-600: #63666e;
+  --oks-color-default-700: #4c4c5c;
+  --oks-color-default-800: #34343f;
+  --oks-color-default-900: #202028;
+  --oks-color-default-950: #121216;
+
+  --oks-color-neutral-50: var(--oks-color-default-50);
+  --oks-color-neutral-100: var(--oks-color-default-100);
+  --oks-color-neutral-200: var(--oks-color-default-200);
+  --oks-color-neutral-300: var(--oks-color-default-300);
+  --oks-color-neutral-400: var(--oks-color-default-400);
+  --oks-color-neutral-500: var(--oks-color-default-500);
+  --oks-color-neutral-600: var(--oks-color-default-600);
+  --oks-color-neutral-700: var(--oks-color-default-700);
+  --oks-color-neutral-800: var(--oks-color-default-800);
+  --oks-color-neutral-900: var(--oks-color-default-900);
+  --oks-color-neutral-950: var(--oks-color-default-950);
+
+  --oks-color-border: var(--oks-color-default-200);
+  --oks-color-surface: #ffffff;
+
+  /* extra chart-only hue (purple accent, seen on a couple of series) */
+  --app-chart-extra: #9b5de0;
+
+  /* ---- radius ---- */
+  --oks-radius-xs: 4px;
+  --oks-radius-sm: 6px;
+  --oks-radius-md: 8px;
+  --oks-radius-lg: 10px;
+  --oks-radius-xl: 14px;
+  --oks-radius-2xl: 20px;
+
+  /* ---- the app layer ---- */
+  --app-bg: #f9f9f9;
+  --app-surface: #ffffff;
+  --app-surface-2: #f4f8fd;
+  --app-border: #e7e9eb;
+  --app-border-strong: #d4d5d8;
+  --app-fg-strong: #1c1d21;
+  --app-fg: #4c4c5c;
+  --app-fg-muted: #82868f;
+  --app-fg-subtle: #abaeb4;
+
+  --app-card-radius: 8px;
+  --app-card-border: 1px solid var(--app-border);
+  --app-card-shadow: 0 1px 2px 0 rgba(130, 143, 163, 0.15);
+
+  --app-menu-bg: #ffffff;
+  --app-menu-fg: #4c4c5c;
+  --app-menu-fg-muted: #82868f;
+  --app-menu-active-bg: #f4f8fd;
+  --app-menu-active-fg: var(--oks-color-primary-600);
+  --app-menu-border: #eef0f2;
+  --app-menu-heading: #abaeb4;
+
+  --app-header-bg: #ffffff;
+  --app-header-height: 65px;
+  --app-header-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+
+  --app-sidenav-width: 240px;
+  --app-sidenav-width-collapsed: 76px;
+
+  /* semantic aliases — reference other --app-* tokens so they cascade to dark */
+  --app-accent: var(--oks-color-primary-500);
+  --app-accent-soft: var(--oks-color-primary-50);
+  --app-ok: var(--oks-color-success-500);
+  --app-ok-soft: var(--oks-color-success-50);
+  --app-warn: var(--oks-color-warning-600);
+  --app-warn-soft: var(--oks-color-warning-50);
+  --app-bad: var(--oks-color-danger-500);
+  --app-bad-soft: var(--oks-color-danger-50);
+  --app-info: var(--oks-color-info-500);
+  --app-info-soft: var(--oks-color-info-50);
+
+  --app-primary: var(--app-accent);
+  --app-primary-soft: var(--app-accent-soft);
+  --app-success: var(--app-ok);
+  --app-success-soft: var(--app-ok-soft);
+  --app-warning: var(--app-warn);
+  --app-warning-soft: var(--app-warn-soft);
+  --app-danger: var(--app-bad);
+  --app-danger-soft: var(--app-bad-soft);
+  --app-secondary: var(--oks-color-secondary-500);
+  --app-secondary-soft: var(--oks-color-secondary-50);
+
+  /* form fields — oks-ui leaves these light-only, so define light here too */
+  --oks-form-field-bg: #ffffff;
+  --oks-form-field-fg: var(--app-fg-strong);
+  --oks-form-field-border: var(--app-border);
+  --oks-form-field-border-hover: var(--app-border-strong);
+  --oks-form-field-placeholder: var(--app-fg-subtle);
+  --oks-form-field-label: var(--app-fg);
+  --oks-form-field-muted: var(--app-fg-muted);
+}
+
+:root[data-theme='dark'] {
+  --oks-color-surface: #1e1f27;
+  --oks-color-border: #293036;
+  --oks-color-default-200: #293036;
+
+  --app-bg: #17181e;
+  --app-surface: #1e1f27;
+  --app-surface-2: #22232c;
+  --app-border: #293036;
+  --app-border-strong: #384049;
+  --app-fg-strong: #eef1f4;
+  --app-fg: #aab8c5;
+  --app-fg-muted: #8791a0;
+  --app-fg-subtle: #626a76;
+
+  --app-card-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+
+  --app-menu-bg: #1e1f27;
+  --app-menu-fg: #aab8c5;
+  --app-menu-fg-muted: #737d89;
+  --app-menu-active-bg: #22232c;
+  --app-menu-active-fg: #ced6df;
+  --app-menu-border: #262731;
+  --app-menu-heading: #575f6a;
+
+  --app-header-bg: #252630;
+  --app-header-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+
+  --app-accent-soft: rgba(63, 114, 175, 0.16);
+  --app-ok-soft: rgba(99, 163, 97, 0.16);
+  --app-warn-soft: rgba(255, 194, 111, 0.16);
+  --app-bad-soft: rgba(252, 81, 133, 0.16);
+  --app-info-soft: rgba(63, 193, 201, 0.16);
+  --app-secondary-soft: rgba(114, 134, 211, 0.16);
+
+  --oks-form-field-bg: #22232c;
+  --oks-form-field-fg: var(--app-fg-strong);
+  --oks-form-field-border: #384049;
+  --oks-form-field-border-hover: #4a5560;
+  --oks-form-field-placeholder: #626a76;
+  --oks-form-field-label: var(--app-fg);
+  --oks-form-field-muted: var(--app-fg-muted);
+}
+
+/* ---- global oks-ui patches (logged in OKS-UI-FEEDBACK.md) ---- */
+
+.oksChart {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.donut-no-center svg > g > text[text-anchor='middle'][dominant-baseline='middle'] {
+  display: none;
+}
+
+body {
+  background: var(--app-bg);
+  color: var(--app-fg);
+  font-family: var(--oks-font-sans);
+  font-size: 13.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--app-font-heading);
+  color: var(--app-fg-strong);
+}
+
+/* ---- live theme-customizer overrides (Sidebars / Topbar / Layout Options nav) ---- */
+
+:root[data-menu-color='dark'] {
+  --app-menu-bg: #1e1f27;
+  --app-menu-fg: #aab8c5;
+  --app-menu-fg-muted: #737d89;
+  --app-menu-active-bg: #22232c;
+  --app-menu-active-fg: #ced6df;
+  --app-menu-border: #262731;
+  --app-menu-heading: #575f6a;
+}
+
+:root[data-menu-color='gray'] {
+  --app-menu-bg: #f4f5f7;
+  --app-menu-fg: var(--app-fg);
+  --app-menu-active-bg: #e9ebee;
+  --app-menu-border: #e5e6e9;
+}
+
+:root[data-topbar-color='dark'] {
+  --app-header-bg: #252630;
+}
+
+:root[data-topbar-color='gray'] {
+  --app-header-bg: #f4f5f7;
+}
+
+:root[data-density='compact'] {
+  --app-card-radius: 6px;
+  --app-space-card-py: 12px;
+  --app-space-card-px: 16px;
+  --app-sidenav-width: 212px;
+}
+
+:root {
+  --app-space-card-py: 18px;
+  --app-space-card-px: 24px;
+}
+
+:root[data-header-position='scrollable'] .app-header {
+  position: static !important;
+}
+
+:root[data-boxed='true'] .app-shell-content {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+:root[data-sidenav-size='compact'] .app-sidebar {
+  width: var(--app-sidenav-width-collapsed);
+}
+
+:root[data-sidenav-size='hover'] .app-sidebar {
+  width: var(--app-sidenav-width-collapsed);
+  transition: width 0.15s ease;
+}
+:root[data-sidenav-size='hover'] .app-sidebar:hover {
+  width: var(--app-sidenav-width);
+}
