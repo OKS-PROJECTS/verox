@@ -29,15 +29,17 @@ export const GOAL_ACHIEVEMENT = [
 export const GOAL_TABLE = [
   { goal: 'Pipeline Target', completed: '57,300', target: '90,000' },
   { goal: 'Lead Generation', completed: '48,900', target: '80,000' },
-  { goal: 'Beta Rollout Readiness', completed: '68%', target: 'Security Review Pending' },
-  { goal: 'Support SLA Compliance', completed: '88%', target: '92%' },
+  { goal: 'Beta Rollout', completed: '68%', target: 'Pending review' },
+  { goal: 'Support SLA', completed: '88%', target: '92%' },
 ]
 
 export const REGIONS = [
   { region: 'Washington', value: 715 },
   { region: 'Colorado', value: 540 },
-  { region: 'Arizona', value: 385 },
   { region: 'Georgia', value: 505 },
+  { region: 'Arizona', value: 385 },
+  { region: 'Oregon', value: 340 },
+  { region: 'Michigan', value: 275 },
   { region: 'Ohio', value: 230 },
 ]
 

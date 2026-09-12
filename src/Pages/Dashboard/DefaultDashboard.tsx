@@ -104,7 +104,7 @@ export default function DefaultDashboard() {
               { key: 'appUsers', name: 'App Users', color: 'var(--oks-color-success-500)' },
               { key: 'socialMedia', name: 'Social Media', color: 'var(--oks-color-warning-600)' },
             ]}
-            height={220}
+            height={280}
             unstyled
             legend
             line={{ curve: 'smooth', area: { show: true, fill: { opacity: 0.12 } } }}
@@ -137,9 +137,9 @@ export default function DefaultDashboard() {
               getRowKey={(r) => r.goal}
               rows={GOAL_TABLE}
               columns={[
-                { key: 'goal', header: 'Goal' },
-                { key: 'completed', header: 'Completed' },
-                { key: 'target', header: 'Target' },
+                { key: 'goal', header: 'Goal', width: '40%' },
+                { key: 'completed', header: 'Completed', width: '30%' },
+                { key: 'target', header: 'Target', width: '30%' },
               ]}
             />
           </CardBody>
@@ -162,7 +162,7 @@ export default function DefaultDashboard() {
               data={REGIONS}
               x="region"
               series="value"
-              height={220}
+              height={280}
               unstyled
               palette={{ roles: ['primary'] }}
               bar={{ radius: 4 }}
