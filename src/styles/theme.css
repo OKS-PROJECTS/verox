@@ -271,6 +271,16 @@
   --oks-card-padding-y: 18px;
 }
 
+/* Sidebar active-item treatment, matched to the reference's measured values. */
+.oksNav {
+  --oks-nav-fg-active: var(--oks-color-primary-500);
+  --oks-nav-bg-active: var(--app-surface-2);
+  --oks-nav-item-radius: 5px;
+}
+.oksNavItem[data-active='true'] > .oksNavLink {
+  font-weight: 400;
+}
+
 body {
   background: var(--app-bg);
   color: var(--app-fg);
