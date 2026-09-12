@@ -135,7 +135,7 @@
   --oks-radius-xs: 4px;
   --oks-radius-sm: 6px;
   --oks-radius-md: 8px;
-  --oks-radius-lg: 10px;
+  --oks-radius-lg: 8px;
   --oks-radius-xl: 14px;
   --oks-radius-2xl: 20px;
 
@@ -257,6 +257,18 @@
 
 .donut-no-center svg > g > text[text-anchor='middle'][dominant-baseline='middle'] {
   display: none;
+}
+
+/*
+ * Card's shadow scale is hardcoded per depth in oks-ui's own CSS (not an
+ * overridable token — --oks-card-shadow is only set inline per data-shadow
+ * value), so the reference's subtle card shadow can only be matched with a
+ * normal-specificity override here. Logged in OKS-UI-FEEDBACK.md.
+ */
+.oksCard {
+  --oks-card-shadow: 0 1px 2px 0 rgba(130, 143, 163, 0.15);
+  --oks-card-padding-x: 24px;
+  --oks-card-padding-y: 18px;
 }
 
 body {
