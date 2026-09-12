@@ -140,18 +140,21 @@ export default function DefaultDashboard() {
                 ]}
               />
             </div>
-            <Table
-              aria-label="Goal detail"
-              removeWrapper
-              isCompact
-              getRowKey={(r) => r.goal}
-              rows={GOAL_TABLE}
-              columns={[
-                { key: 'goal', header: 'Goal', width: '40%' },
-                { key: 'completed', header: 'Completed', width: '30%' },
-                { key: 'target', header: 'Target', width: '30%' },
-              ]}
-            />
+            <div className="overflow-x-auto">
+              <Table
+                aria-label="Goal detail"
+                removeWrapper
+                isCompact
+                getRowKey={(r) => r.goal}
+                rows={GOAL_TABLE}
+                columns={[
+                  { key: 'goal', header: 'Goal', cellClassName: 'whitespace-nowrap' },
+                  { key: 'completed', header: 'Completed', cellClassName: 'whitespace-nowrap' },
+                  { key: 'target', header: 'Target', cellClassName: 'whitespace-nowrap' },
+                ]}
+                classNames={{ headerCell: 'text-[11px] whitespace-nowrap', cell: 'text-[12px]' }}
+              />
+            </div>
           </CardBody>
         </Card>
 
