@@ -111,7 +111,7 @@ export default function DefaultDashboard() {
 
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Goal Achievement Metrics
             </h3>
           </CardHeader>
@@ -146,7 +146,7 @@ export default function DefaultDashboard() {
         <Card>
           <CardHeader className="flex items-center gap-2">
             <Globe size={16} style={{ color: 'var(--app-primary)' }} />
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Regional Sales Distribution
             </h3>
           </CardHeader>
@@ -169,7 +169,7 @@ export default function DefaultDashboard() {
         </Card>
       </div>
 
-      <div className="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-[2fr_1fr]">
+      <div className="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-[3fr_1fr]">
         <DataTable
           title="Page Analytics Overview"
           columns={[
@@ -188,7 +188,7 @@ export default function DefaultDashboard() {
 
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Top Countries
             </h3>
           </CardHeader>
@@ -196,7 +196,15 @@ export default function DefaultDashboard() {
             <ul className="flex flex-col gap-3">
               {TOP_COUNTRIES.map((c) => (
                 <li key={c.country} className="flex items-center justify-between text-[13px]">
-                  <span style={{ color: 'var(--app-fg)' }}>{c.country}</span>
+                  <span className="flex items-center gap-2">
+                    <span
+                      className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[8px] font-bold"
+                      style={{ background: 'var(--app-surface-2)', color: 'var(--app-fg-muted)' }}
+                    >
+                      {c.code}
+                    </span>
+                    <span style={{ color: 'var(--app-fg)' }}>{c.country}</span>
+                  </span>
                   <span className="flex items-center gap-2">
                     <span style={{ color: 'var(--app-ok)' }}>{c.change}</span>
                     <span className="font-semibold" style={{ color: 'var(--app-fg-strong)' }}>

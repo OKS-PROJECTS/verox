@@ -93,7 +93,7 @@ export default function Tour() {
                 >
                   {s.icon}
                 </span>
-                <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+                <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                   {s.title}
                 </h3>
                 <p className="text-[12.5px]" style={{ color: 'var(--app-fg-muted)' }}>

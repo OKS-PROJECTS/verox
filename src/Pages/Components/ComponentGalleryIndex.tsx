@@ -48,7 +48,7 @@ export default function ComponentGalleryIndex() {
                   <Card isHoverable isPressable className="h-full">
                     <CardBody>
                       <div className="mb-2 flex items-center justify-between">
-                        <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+                        <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                           {entry.name}
                         </h3>
                         <Chip size="sm" variant="bordered" color="default">

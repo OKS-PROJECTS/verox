@@ -25,7 +25,7 @@ export function DonutCard({ title, subtitle, data, centerLabel, height = 200 }: 
   return (
     <Card>
       <CardHeader>
-        <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+        <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
           {title}
         </h3>
         {subtitle && (

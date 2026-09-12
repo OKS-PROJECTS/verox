@@ -36,7 +36,7 @@ function VideoCard({ title, description }: VideoCardProps) {
   return (
     <Card>
       <CardHeader>
-        <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+        <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
           {title}
         </h3>
         <p className="mt-0.5 text-[12px]" style={{ color: 'var(--app-fg-muted)' }}>

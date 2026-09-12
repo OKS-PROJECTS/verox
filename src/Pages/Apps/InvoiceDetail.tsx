@@ -36,7 +36,7 @@ export default function InvoiceDetail() {
         <div className="flex flex-col gap-5 lg:col-span-2">
           <Card>
             <CardHeader className="flex items-center justify-between">
-              <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+              <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                 Line items
               </h3>
               <StatusChip status={invoice.status} />
@@ -75,7 +75,7 @@ export default function InvoiceDetail() {
         <div className="flex flex-col gap-5">
           <Card>
             <CardHeader>
-              <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+              <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                 Client
               </h3>
             </CardHeader>
@@ -96,7 +96,7 @@ export default function InvoiceDetail() {
 
           <Card>
             <CardHeader>
-              <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+              <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                 Summary
               </h3>
             </CardHeader>

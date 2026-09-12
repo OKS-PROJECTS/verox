@@ -29,7 +29,7 @@ export default function Outlook() {
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-[2fr_1fr]">
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Unified inbox
             </h3>
           </CardHeader>
@@ -77,7 +77,7 @@ export default function Outlook() {
           <Card>
             <CardHeader className="flex items-center gap-2">
               <Clock size={16} style={{ color: 'var(--app-primary)' }} />
-              <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+              <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                 Today&apos;s schedule
               </h3>
             </CardHeader>
@@ -106,7 +106,7 @@ export default function Outlook() {
 
           <Card>
             <CardHeader>
-              <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+              <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                 Quick tasks
               </h3>
             </CardHeader>

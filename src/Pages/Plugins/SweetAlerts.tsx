@@ -29,7 +29,7 @@ export default function SweetAlerts() {
         <Card>
           <CardHeader className="flex items-center gap-2">
             <CheckCircle2 size={16} style={{ color: 'var(--app-success)' }} />
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Success toast
             </h3>
           </CardHeader>
@@ -50,7 +50,7 @@ export default function SweetAlerts() {
         <Card>
           <CardHeader className="flex items-center gap-2">
             <XCircle size={16} style={{ color: 'var(--app-danger)' }} />
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Error toast
             </h3>
           </CardHeader>
@@ -73,7 +73,7 @@ export default function SweetAlerts() {
         <Card>
           <CardHeader className="flex items-center gap-2">
             <AlertTriangle size={16} style={{ color: 'var(--app-danger)' }} />
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Confirm destructive action
             </h3>
           </CardHeader>
@@ -90,7 +90,7 @@ export default function SweetAlerts() {
         <Card>
           <CardHeader className="flex items-center gap-2">
             <Info size={16} style={{ color: 'var(--app-info)' }} />
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Informational modal
             </h3>
           </CardHeader>

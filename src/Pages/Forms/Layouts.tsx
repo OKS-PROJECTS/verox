@@ -12,7 +12,7 @@ export default function FormsLayouts() {
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Top label (default)
             </h3>
           </CardHeader>
@@ -25,7 +25,7 @@ export default function FormsLayouts() {
         </Card>
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Left label
             </h3>
           </CardHeader>
@@ -38,7 +38,7 @@ export default function FormsLayouts() {
         </Card>
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Floating label
             </h3>
           </CardHeader>
@@ -51,7 +51,7 @@ export default function FormsLayouts() {
         </Card>
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Inline / two-column
             </h3>
           </CardHeader>

@@ -42,14 +42,14 @@ export const REGIONS = [
 ]
 
 export const TOP_COUNTRIES = [
-  { country: 'United States', change: '3.1%', value: 1680 },
-  { country: 'Brazil', change: '2.0%', value: 705 },
-  { country: 'India', change: '4.6%', value: 2510 },
-  { country: 'Mexico', change: '1.1%', value: 615 },
-  { country: 'Spain', change: '0.6%', value: 480 },
-  { country: 'Netherlands', change: '2.2%', value: 890 },
-  { country: 'Italy', change: '1.4%', value: 690 },
-  { country: 'South Korea', change: '3.7%', value: 1240 },
+  { country: 'United States', code: 'US', change: '3.1%', value: 1680 },
+  { country: 'Brazil', code: 'BR', change: '2.0%', value: 705 },
+  { country: 'India', code: 'IN', change: '4.6%', value: 2510 },
+  { country: 'Mexico', code: 'MX', change: '1.1%', value: 615 },
+  { country: 'Spain', code: 'ES', change: '0.6%', value: 480 },
+  { country: 'Netherlands', code: 'NL', change: '2.2%', value: 890 },
+  { country: 'Italy', code: 'IT', change: '1.4%', value: 690 },
+  { country: 'South Korea', code: 'KR', change: '3.7%', value: 1240 },
 ]
 
 export interface PageAnalyticsRow {

@@ -39,7 +39,7 @@ export default function ManageApps() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+                  <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                     {app.name}
                   </h3>
                   <p className="mt-1 text-[12.5px] leading-snug" style={{ color: 'var(--app-fg-muted)' }}>

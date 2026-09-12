@@ -57,7 +57,7 @@ export default function CalendarPage() {
         <Card>
           <CardHeader className="flex items-center gap-2">
             <CalendarClock size={16} style={{ color: 'var(--app-primary)' }} />
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Upcoming events
             </h3>
           </CardHeader>

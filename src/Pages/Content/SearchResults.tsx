@@ -143,7 +143,7 @@ export default function SearchResults() {
                   <p className="text-[11px]" style={{ color: 'var(--app-fg-subtle)' }}>
                     {doc.path}
                   </p>
-                  <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+                  <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                     {doc.title}
                   </h3>
                   <p className="mt-1 text-[12.5px] leading-relaxed" style={{ color: 'var(--app-fg)' }}>

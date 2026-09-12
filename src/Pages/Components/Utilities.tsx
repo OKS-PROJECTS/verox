@@ -26,7 +26,7 @@ export default function Utilities() {
         {TOKEN_GROUPS.map((group) => (
           <Card key={group.title}>
             <CardHeader>
-              <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+              <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                 {group.title}
               </h3>
             </CardHeader>
@@ -44,7 +44,7 @@ export default function Utilities() {
         ))}
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Layout rule
             </h3>
           </CardHeader>

@@ -11,7 +11,7 @@ export default function FormsPickers() {
       />
       <Card>
         <CardHeader>
-          <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+          <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
             Book a resource
           </h3>
         </CardHeader>

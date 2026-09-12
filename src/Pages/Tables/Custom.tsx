@@ -13,7 +13,7 @@ export default function CustomTables() {
       />
       <Card>
         <CardHeader>
-          <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+          <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
             Stock Levels
           </h3>
         </CardHeader>

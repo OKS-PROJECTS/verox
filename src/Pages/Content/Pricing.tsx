@@ -131,7 +131,7 @@ export default function Pricing() {
 
       <Card className="mt-6">
         <CardHeader>
-          <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+          <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
             Feature comparison
           </h3>
         </CardHeader>

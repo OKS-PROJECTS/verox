@@ -44,7 +44,7 @@ export default function I18n() {
       <div className="mx-auto flex max-w-lg flex-col gap-5">
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Display language
             </h3>
           </CardHeader>
@@ -68,7 +68,7 @@ export default function I18n() {
 
         <Card>
           <CardHeader className="flex items-center justify-between">
-            <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Live preview
             </h3>
             <Chip size="sm" variant="bordered" color="default">

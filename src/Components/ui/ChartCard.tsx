@@ -18,7 +18,7 @@ export function ChartCard({ title, subtitle, actions, children, className }: Cha
     <Card className={className}>
       <CardHeader className="flex flex-col items-start justify-between gap-3 sm:flex-row">
         <div className="min-w-0">
-          <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+          <h3 className="text-[15px] font-medium" style={{ color: 'var(--app-fg)' }}>
             {title}
           </h3>
           {subtitle && (
