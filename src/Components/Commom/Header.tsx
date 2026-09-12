@@ -48,8 +48,8 @@ export function Header({ onOpenMobileNav, onOpenSettings }: HeaderProps) {
 
   return (
     <header
-      className="app-header sticky top-0 z-30 flex h-[var(--app-header-height)] items-center gap-3 border-b px-4 lg:px-6"
-      style={{ background: 'var(--app-header-bg)', borderColor: 'var(--app-border)', boxShadow: 'var(--app-header-shadow)' }}
+      className="app-header sticky top-0 z-30 flex h-[var(--app-header-height)] items-center gap-3 px-4 lg:px-6"
+      style={{ background: 'var(--app-header-bg)' }}
     >
       <Button
         isIconOnly
