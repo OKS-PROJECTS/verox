@@ -271,14 +271,27 @@
   --oks-card-padding-y: 18px;
 }
 
-/* Sidebar active-item treatment, matched to the reference's measured values. */
+/*
+ * Sidebar active-item treatment, matched to the reference's measured values.
+ * Also: `.oksNav`'s own width defaults to a hardcoded `--oks-nav-width: 15rem`
+ * regardless of its container — inside our own padded <nav> wrapper (which
+ * already constrains the sidebar to --app-sidenav-width), that fixed 240px
+ * doesn't shrink to fit the remaining content width, so the nav tree
+ * overflows its own container and forces a horizontal scrollbar. Overriding
+ * the width to 100% lets it size to the wrapper instead. Logged in
+ * OKS-UI-FEEDBACK.md.
+ */
 .oksNav {
   --oks-nav-fg-active: var(--oks-color-primary-500);
   --oks-nav-bg-active: var(--app-surface-2);
   --oks-nav-item-radius: 5px;
+  width: 100%;
 }
 .oksNavItem[data-active='true'] > .oksNavLink {
   font-weight: 400;
+}
+.oksNavLink {
+  padding-right: 16px;
 }
 
 body {
