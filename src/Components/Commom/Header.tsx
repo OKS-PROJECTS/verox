@@ -78,7 +78,9 @@ export function Header({ onOpenMobileNav, onOpenSettings }: HeaderProps) {
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Button variant="ghost" color="default" size="sm">
-              <Plus size={16} /> Quick create
+              <span className="flex items-center gap-1.5">
+                <Plus size={16} /> Quick create
+              </span>
             </Button>
           </DropdownTrigger>
           <DropdownMenu aria-label="Quick create">
