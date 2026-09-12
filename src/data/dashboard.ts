@@ -20,36 +20,36 @@ export const ENGAGEMENT_TREND = MONTHS.map((month, i) => ({
 }))
 
 export const GOAL_ACHIEVEMENT = [
-  { label: 'Sales Target', value: 82450, color: 'var(--oks-color-primary-500)' },
-  { label: 'Marketing Reach', value: 66200, color: 'var(--oks-color-secondary-500)' },
-  { label: 'Product Launch Readiness', value: 74, color: 'var(--oks-color-success-500)' },
-  { label: 'Support Response SLA', value: 91, color: 'var(--oks-color-warning-500)' },
+  { label: 'Pipeline Target', value: 57300, color: 'var(--oks-color-primary-500)' },
+  { label: 'Lead Generation', value: 48900, color: 'var(--oks-color-secondary-500)' },
+  { label: 'Beta Rollout Readiness', value: 68, color: 'var(--oks-color-success-500)' },
+  { label: 'Support SLA Compliance', value: 88, color: 'var(--oks-color-warning-500)' },
 ]
 
 export const GOAL_TABLE = [
-  { goal: 'Sales Target', completed: '82,450', target: '100,000' },
-  { goal: 'Marketing Reach', completed: '66,200', target: '100,000' },
-  { goal: 'Product Launch Readiness', completed: '74%', target: 'Final QA Pending' },
-  { goal: 'Support Response SLA', completed: '91%', target: '95%' },
+  { goal: 'Pipeline Target', completed: '57,300', target: '90,000' },
+  { goal: 'Lead Generation', completed: '48,900', target: '80,000' },
+  { goal: 'Beta Rollout Readiness', completed: '68%', target: 'Security Review Pending' },
+  { goal: 'Support SLA Compliance', completed: '88%', target: '92%' },
 ]
 
 export const REGIONS = [
-  { region: 'New York', value: 890 },
-  { region: 'California', value: 650 },
-  { region: 'Texas', value: 320 },
-  { region: 'Florida', value: 470 },
-  { region: 'Illinois', value: 265 },
+  { region: 'Washington', value: 715 },
+  { region: 'Colorado', value: 540 },
+  { region: 'Arizona', value: 385 },
+  { region: 'Georgia', value: 505 },
+  { region: 'Ohio', value: 230 },
 ]
 
 export const TOP_COUNTRIES = [
-  { country: 'United States', change: '2.3%', value: 1450 },
-  { country: 'United Kingdom', change: '1.2%', value: 980 },
-  { country: 'India', change: '3.8%', value: 2340 },
-  { country: 'Canada', change: '1.5%', value: 740 },
-  { country: 'Australia', change: '0.8%', value: 560 },
-  { country: 'Germany', change: '2.9%', value: 1120 },
-  { country: 'France', change: '1.0%', value: 845 },
-  { country: 'Japan', change: '4.1%', value: 1980 },
+  { country: 'United States', change: '3.1%', value: 1680 },
+  { country: 'Brazil', change: '2.0%', value: 705 },
+  { country: 'India', change: '4.6%', value: 2510 },
+  { country: 'Mexico', change: '1.1%', value: 615 },
+  { country: 'Spain', change: '0.6%', value: 480 },
+  { country: 'Netherlands', change: '2.2%', value: 890 },
+  { country: 'Italy', change: '1.4%', value: 690 },
+  { country: 'South Korea', change: '3.7%', value: 1240 },
 ]
 
 export interface PageAnalyticsRow {
@@ -63,11 +63,11 @@ export interface PageAnalyticsRow {
 }
 
 export const PAGE_ANALYTICS: PageAnalyticsRow[] = [
-  { path: '/dashboard', source: 'Direct', views: 3980, avgTime: '02m 12s', bounceRate: '19.5%', conversionRate: '4.3%' },
-  { path: '/pricing', source: 'Google', views: 1742, avgTime: '01m 49s', bounceRate: '22.1%', conversionRate: '6.7%' },
-  { path: '/features', source: 'LinkedIn', views: 2310, avgTime: '02m 05s', bounceRate: '17.8%', conversionRate: '5.4%' },
-  { path: '/blog/how-to-boost-sales', source: 'Twitter', views: 1128, avgTime: '03m 14s', bounceRate: '14.9%', conversionRate: '2.2%' },
-  { path: '/docs/get-started', source: 'Reddit', views: 2540, avgTime: '04m 01s', bounceRate: '11.2%', conversionRate: '7.9%' },
-  { path: '/integrations', source: 'Direct', views: 1660, avgTime: '01m 32s', bounceRate: '25.4%', conversionRate: '3.1%' },
-  { path: '/changelog', source: 'Google', views: 980, avgTime: '00m 58s', bounceRate: '31.0%', conversionRate: '1.6%' },
+  { path: '/dashboard', source: 'Direct', views: 4620, avgTime: '02m 44s', bounceRate: '18.2%', conversionRate: '5.1%' },
+  { path: '/pricing', source: 'Google', views: 2015, avgTime: '01m 33s', bounceRate: '24.6%', conversionRate: '5.9%' },
+  { path: '/templates', source: 'LinkedIn', views: 1870, avgTime: '02m 28s', bounceRate: '16.4%', conversionRate: '6.2%' },
+  { path: '/blog/scale-your-workflow', source: 'Twitter', views: 940, avgTime: '03m 40s', bounceRate: '13.5%', conversionRate: '2.8%' },
+  { path: '/docs/quickstart', source: 'Reddit', views: 2980, avgTime: '03m 52s', bounceRate: '10.6%', conversionRate: '8.4%' },
+  { path: '/integrations', source: 'Direct', views: 1345, avgTime: '01m 47s', bounceRate: '27.1%', conversionRate: '2.9%' },
+  { path: '/changelog', source: 'Google', views: 760, avgTime: '01m 05s', bounceRate: '29.3%', conversionRate: '1.9%' },
 ]

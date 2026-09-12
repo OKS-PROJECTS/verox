@@ -19,12 +19,12 @@ export default function DefaultDashboard() {
         crumbs={[{ label: 'Verox', to: '/' }, { label: 'Dashboard' }]}
       />
 
-      <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_2fr]">
-        <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-1">
-          <KpiCard label="Total Orders" value="687.30k" delta="5.42%" trend="up" help="Since last month" icon={<ShoppingBag size={18} />} tone="primary" />
-          <KpiCard label="Total Revenue" value="$2.50M" delta="8.76%" trend="up" help="Since last month" icon={<DollarSign size={18} />} tone="success" />
-          <KpiCard label="Active Customers" value="54.60k" delta="2.13%" trend="down" help="Since last month" icon={<Users size={18} />} tone="warning" />
-          <KpiCard label="Conversion Rate" value="4.87%" delta="1.28%" trend="up" help="Since last week" icon={<Percent size={18} />} tone="info" />
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,5fr)_7fr]">
+        <div className="grid grid-cols-2 gap-3 sm:gap-5">
+          <KpiCard label="Total Orders" value="412.80k" delta="6.15%" trend="up" help="Since last month" icon={<ShoppingBag size={18} />} tone="primary" />
+          <KpiCard label="Total Revenue" value="$1.85M" delta="7.32%" trend="up" help="Since last month" icon={<DollarSign size={18} />} tone="success" />
+          <KpiCard label="Active Customers" value="38.90k" delta="1.64%" trend="down" help="Since last month" icon={<Users size={18} />} tone="warning" />
+          <KpiCard label="Conversion Rate" value="3.92%" delta="0.87%" trend="up" help="Since last week" icon={<Percent size={18} />} tone="info" />
         </div>
 
         <ChartCard
@@ -119,12 +119,12 @@ export default function DefaultDashboard() {
             <div className="mb-4 flex justify-center">
               <RingGauge
                 diameter={150}
-                centerValue="83%"
+                centerValue="76%"
                 centerLabel="Avg."
                 rings={[
-                  { label: 'Sales Target', value: 82, color: 'var(--oks-color-primary-500)', size: 150 },
-                  { label: 'Marketing Reach', value: 66, color: 'var(--oks-color-secondary-500)', size: 112 },
-                  { label: 'Support SLA', value: 91, color: 'var(--oks-color-success-500)', size: 74 },
+                  { label: 'Pipeline Target', value: 64, color: 'var(--oks-color-primary-500)', size: 150 },
+                  { label: 'Lead Generation', value: 61, color: 'var(--oks-color-secondary-500)', size: 112 },
+                  { label: 'Support SLA', value: 88, color: 'var(--oks-color-success-500)', size: 74 },
                 ]}
               />
             </div>
