@@ -135,8 +135,8 @@ export default function DefaultDashboard() {
                 centerLabel="Avg."
                 rings={[
                   { label: 'Pipeline Target', value: 64, color: 'var(--oks-color-primary-500)', size: 150 },
-                  { label: 'Lead Generation', value: 61, color: 'var(--oks-color-secondary-500)', size: 112 },
-                  { label: 'Support SLA', value: 88, color: 'var(--oks-color-success-500)', size: 74 },
+                  { label: 'Lead Generation', value: 61, color: 'var(--oks-color-secondary-500)', size: 108 },
+                  { label: 'Support SLA', value: 88, color: 'var(--oks-color-success-500)', size: 66 },
                 ]}
               />
             </div>

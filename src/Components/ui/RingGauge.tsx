@@ -24,14 +24,14 @@ interface RingGaugeProps {
  */
 export function RingGauge({ rings, centerValue, centerLabel, diameter = 160 }: RingGaugeProps) {
   return (
-    <div className="relative shrink-0" style={{ width: diameter, height: diameter }}>
+    <div className="ring-gauge relative shrink-0" style={{ width: diameter, height: diameter }}>
       {rings.map((r) => (
         <div key={r.label} className="absolute inset-0 flex items-center justify-center">
           <CircularProgress
             value={r.value}
             aria-label={r.label}
             showValueLabel={false}
-            strokeWidth={8}
+            strokeWidth={5}
             style={{ '--oks-circular-progress-indicator': r.color, '--oks-circular-progress-track': 'var(--app-border)', '--oks-circular-progress-size': `${r.size}px` } as CSSProperties}
           />
         </div>

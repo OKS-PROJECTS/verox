@@ -294,6 +294,18 @@
   padding-right: 16px;
 }
 
+/*
+ * RingGauge (concentric CircularProgress rings) — CircularProgress's arc
+ * end-cap is hardcoded to stroke-linecap:round, which reads fine on a
+ * single ring but produces bulgy overlapping "blobs" where several
+ * concentric rings' rounded start/end caps sit close together. Flat caps
+ * read as a clean gauge instead. Scoped to .ring-gauge only — a standalone
+ * CircularProgress elsewhere keeps its default rounded cap.
+ */
+.ring-gauge .oksCircularProgressIndicator {
+  stroke-linecap: butt;
+}
+
 body {
   background: var(--app-bg);
   color: var(--app-fg);
