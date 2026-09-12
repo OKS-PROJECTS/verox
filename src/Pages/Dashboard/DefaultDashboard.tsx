@@ -10,6 +10,16 @@ import {
   TOP_COUNTRIES,
 } from '../../data/dashboard'
 
+const REGION_COLORS = [
+  'var(--oks-color-primary-500)',
+  'var(--oks-color-success-500)',
+  'var(--oks-color-warning-500)',
+  'var(--oks-color-info-500)',
+  'var(--oks-color-secondary-500)',
+  'var(--oks-color-danger-400)',
+  'var(--oks-color-primary-300)',
+]
+
 export default function DefaultDashboard() {
   return (
     <div>
@@ -107,7 +117,7 @@ export default function DefaultDashboard() {
             height={280}
             unstyled
             legend
-            line={{ curve: 'smooth', area: { show: true, fill: { opacity: 0.12 } } }}
+            line={{ curve: 'smooth', area: { show: true, fill: { opacity: 0.12 } }, markers: { size: 5 } }}
           />
         </ChartCard>
 
@@ -153,7 +163,7 @@ export default function DefaultDashboard() {
             </h3>
           </CardHeader>
           <CardBody className="pt-0">
-            <p className="mb-2 text-[11.5px]" style={{ color: 'var(--app-fg-subtle)' }}>
+            <p className="mb-3 text-[11.5px]" style={{ color: 'var(--app-fg-subtle)' }}>
               Shown as a ranked chart — oks-ui ships no choropleth/region-map
               primitive (logged in the feedback doc).
             </p>
@@ -162,11 +172,24 @@ export default function DefaultDashboard() {
               data={REGIONS}
               x="region"
               series="value"
-              height={280}
+              height={170}
               unstyled
-              palette={{ roles: ['primary'] }}
+              palette={{ colors: REGION_COLORS }}
               bar={{ radius: 4 }}
             />
+            <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5 border-t pt-4" style={{ borderColor: 'var(--app-border)' }}>
+              {REGIONS.map((r, i) => (
+                <div key={r.region} className="flex items-center gap-2 text-[12.5px]">
+                  <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: REGION_COLORS[i % REGION_COLORS.length] }} />
+                  <span className="truncate" style={{ color: 'var(--app-fg)' }}>
+                    {r.region}
+                  </span>
+                  <span className="ml-auto shrink-0 font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+                    {r.value}
+                  </span>
+                </div>
+              ))}
+            </div>
           </CardBody>
         </Card>
       </div>
