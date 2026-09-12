@@ -1,5 +1,5 @@
 import { Card, CardBody, CardHeader, Chart, Button, Table } from 'oks-ui'
-import { ShoppingBag, DollarSign, Users, Percent, Download, Upload, Globe } from 'lucide-react'
+import { ShoppingBag, DollarSign, Users, Percent, Download, Upload, Globe, UserPlus, Clock } from 'lucide-react'
 import { ChartCard, DataTable, KpiCard, PageHeader, RingGauge } from '../../Components/ui'
 import {
   ENGAGEMENT_TREND,
@@ -25,6 +25,8 @@ export default function DefaultDashboard() {
           <KpiCard label="Total Revenue" value="$1.85M" delta="7.32%" trend="up" help="Since last month" icon={<DollarSign size={18} />} tone="success" />
           <KpiCard label="Active Customers" value="38.90k" delta="1.64%" trend="down" help="Since last month" icon={<Users size={18} />} tone="warning" />
           <KpiCard label="Conversion Rate" value="3.92%" delta="0.87%" trend="up" help="Since last week" icon={<Percent size={18} />} tone="info" />
+          <KpiCard label="New Signups" value="9.60k" delta="5.80%" trend="up" help="Since last month" icon={<UserPlus size={18} />} tone="secondary" />
+          <KpiCard label="Avg. Session Time" value="4m 12s" delta="2.10%" trend="up" help="Since last month" icon={<Clock size={18} />} tone="danger" />
         </div>
 
         <ChartCard
@@ -47,7 +49,7 @@ export default function DefaultDashboard() {
               data={PERFORMANCE_TREND}
               x="month"
               series={[{ key: 'websiteTraffic', name: 'Website Traffic', color: 'var(--oks-color-primary-300)' }]}
-              height={260}
+              height={380}
               unstyled
               grid={{ horizontal: true }}
               padding={{ top: 8, right: 12, bottom: 24, left: 40 }}
@@ -63,7 +65,7 @@ export default function DefaultDashboard() {
                   { key: 'conversionRate', name: 'Conversion Rate', color: 'var(--oks-color-success-500)' },
                   { key: 'revenueGrowth', name: 'Revenue Growth', color: 'var(--oks-color-warning-600)' },
                 ]}
-                height={260}
+                height={380}
                 unstyled
                 background="transparent"
                 legend={false}
