@@ -2,6 +2,8 @@ import {
   Avatar,
   AvatarGroup,
   Badge,
+  Board,
+  type BoardColumnData,
   Button,
   Card,
   CardBody,
@@ -242,5 +244,52 @@ export const dataDisplayEntries: GalleryEntry[] = [
     Paid in full via ACH transfer.
   </TimelineItem>
 </Timeline>`,
+  },
+  {
+    slug: 'board',
+    name: 'Board',
+    category: 'Data display',
+    description: 'Drag-and-drop kanban board with per-column limits and a card-move callback.',
+    render: () => {
+      const columns: BoardColumnData[] = [
+        { id: 'todo', title: 'To Do', color: 'default' },
+        { id: 'doing', title: 'In Progress', color: 'info' },
+        { id: 'done', title: 'Done', color: 'success' },
+      ]
+      const items = [
+        { id: 'c-1', columnId: 'todo', title: 'Audit onboarding copy' },
+        { id: 'c-2', columnId: 'todo', title: 'Draft vendor shortlist' },
+        { id: 'c-3', columnId: 'doing', title: 'Rebuild PDF template' },
+        { id: 'c-4', columnId: 'done', title: 'Ship CSV export' },
+      ]
+      return (
+        <Board
+          aria-label="Sprint board preview"
+          columns={columns}
+          items={items}
+          getItemId={(item) => item.id}
+          getItemColumn={(item) => item.columnId}
+          isDragDisabled
+          columnWidth={200}
+          renderCard={(item) => (
+            <div
+              className="p-2.5 text-[12.5px]"
+              style={{ background: 'var(--app-surface)', border: '1px solid var(--app-border)', borderRadius: 'var(--app-card-radius)' }}
+            >
+              {item.title}
+            </div>
+          )}
+        />
+      )
+    },
+    source: `<Board
+  aria-label="Sprint board"
+  columns={[{ id: 'todo', title: 'To Do' }, { id: 'doing', title: 'In Progress' }, { id: 'done', title: 'Done' }]}
+  items={items}
+  getItemId={(item) => item.id}
+  getItemColumn={(item) => item.columnId}
+  renderCard={(item) => <Card>{item.title}</Card>}
+  onItemMove={(move) => applyMove(move)}
+/>`,
   },
 ]

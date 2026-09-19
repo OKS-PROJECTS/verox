@@ -1,36 +1,117 @@
-import type { BoardColumnData } from 'oks-ui'
-import type { BoardItem } from '../Components/archetypes/BoardPage'
-
-export type TaskPriority = 'Low' | 'Medium' | 'High' | 'Urgent'
-
-export interface TaskCard extends BoardItem {
-  title: string
-  assignee: string
-  avatarSeed: string
-  priority: TaskPriority
-  due: string
+export interface TeamStat {
+  label: string
+  value: string
 }
 
-export const BOARD_COLUMNS: BoardColumnData[] = [
-  { id: 'backlog', title: 'Backlog', color: 'default' },
-  { id: 'in-progress', title: 'In Progress', color: 'info' },
-  { id: 'review', title: 'Review', color: 'warning' },
-  { id: 'done', title: 'Done', color: 'success' },
-]
+export interface TeamCard {
+  id: string
+  name: string
+  isNew?: boolean
+  memberCount: number
+  memberSeeds: string[]
+  about: string
+  stats: [TeamStat, TeamStat, TeamStat]
+  progressLabel: string
+  progressValue: number
+  updatedAgo: string
+}
 
-export const BOARD_TASKS: TaskCard[] = [
-  { id: 't-01', columnId: 'backlog', title: 'Audit onboarding checklist copy', assignee: 'Owen Clarke', avatarSeed: 'owen-clarke', priority: 'Low', due: 'Sep 18' },
-  { id: 't-02', columnId: 'backlog', title: 'Draft Q4 vendor shortlist', assignee: 'Priya Nair', avatarSeed: 'priya-nair', priority: 'Medium', due: 'Sep 20' },
-  { id: 't-03', columnId: 'backlog', title: 'Research calendar sync fix options', assignee: 'Jonathan Lee', avatarSeed: 'jonathan-lee', priority: 'High', due: 'Sep 22' },
-  { id: 't-04', columnId: 'backlog', title: 'Collect renewal terms from Fieldworks', assignee: 'Nina Hughes', avatarSeed: 'nina-hughes', priority: 'Medium', due: 'Sep 24' },
-  { id: 't-05', columnId: 'in-progress', title: 'Rebuild invoice PDF template', assignee: 'Lisa Brown', avatarSeed: 'lisa-brown', priority: 'High', due: 'Sep 15' },
-  { id: 't-06', columnId: 'in-progress', title: 'Fix pagination reset on filter change', assignee: 'Ryan Mitchell', avatarSeed: 'ryan-mitchell', priority: 'Urgent', due: 'Sep 13' },
-  { id: 't-07', columnId: 'in-progress', title: 'Write release notes for v2.4', assignee: 'Carlos Diaz', avatarSeed: 'carlos-diaz', priority: 'Low', due: 'Sep 16' },
-  { id: 't-08', columnId: 'review', title: 'Design review — kanban card density', assignee: 'Samantha Reed', avatarSeed: 'samantha-reed', priority: 'Medium', due: 'Sep 14' },
-  { id: 't-09', columnId: 'review', title: 'Dark mode contrast pass on charts', assignee: 'Nina Hughes', avatarSeed: 'nina-hughes', priority: 'High', due: 'Sep 15' },
-  { id: 't-10', columnId: 'review', title: 'QA pass on two-factor code field', assignee: 'Emily Parker', avatarSeed: 'emily-parker', priority: 'Urgent', due: 'Sep 12' },
-  { id: 't-11', columnId: 'done', title: 'Ship CSV export on invoices list', assignee: 'Lisa Brown', avatarSeed: 'lisa-brown', priority: 'Low', due: 'Sep 9' },
-  { id: 't-12', columnId: 'done', title: 'Resolve sidebar flyout misalignment', assignee: 'Priya Nair', avatarSeed: 'priya-nair', priority: 'Medium', due: 'Sep 8' },
-  { id: 't-13', columnId: 'done', title: 'Notification bell badge count fix', assignee: 'Samantha Reed', avatarSeed: 'samantha-reed', priority: 'Low', due: 'Sep 7' },
-  { id: 't-14', columnId: 'done', title: 'Onboarding tour mobile skip bug', assignee: 'Carlos Diaz', avatarSeed: 'carlos-diaz', priority: 'Medium', due: 'Sep 5' },
+export const TEAM_CARDS: TeamCard[] = [
+  {
+    id: 'team-design',
+    name: 'Product Design Team',
+    isNew: true,
+    memberCount: 4,
+    memberSeeds: ['ava-chen', 'marcus-oduya', 'lena-brandt', 'theo-vance'],
+    about:
+      'Owns the end-to-end product experience, from early research through interactive prototypes, and keeps the visual language consistent across every surface.',
+    stats: [
+      { label: 'Projects', value: '21' },
+      { label: 'Ranking', value: '#4' },
+      { label: 'Budget', value: '$18.6M' },
+    ],
+    progressLabel: 'Sprint completion',
+    progressValue: 70,
+    updatedAgo: '35 minutes ago',
+  },
+  {
+    id: 'team-platform',
+    name: 'Platform Engineering Team',
+    memberCount: 8,
+    memberSeeds: ['diego-farrow', 'hana-kimura', 'petra-solberg', 'wes-oyelaran', 'ines-costa'],
+    about:
+      'Builds and operates the core services and infrastructure every other team depends on, with a steady focus on reliability and developer velocity.',
+    stats: [
+      { label: 'Projects', value: '37' },
+      { label: 'Ranking', value: '#1' },
+      { label: 'Budget', value: '$41.2M' },
+    ],
+    progressLabel: 'Sprint completion',
+    progressValue: 82,
+    updatedAgo: '12 minutes ago',
+  },
+  {
+    id: 'team-security',
+    name: 'Security & Access Team',
+    memberCount: 3,
+    memberSeeds: ['rosa-mendez', 'kian-oshiro', 'felix-torbjorn'],
+    about:
+      'Owns identity, access control, and platform security reviews, keeping the organization’s compliance posture audit-ready year round.',
+    stats: [
+      { label: 'Tickets', value: '14' },
+      { label: 'Ranking', value: '#7' },
+      { label: 'Access', value: 'Full' },
+    ],
+    progressLabel: 'Backlog cleared',
+    progressValue: 47,
+    updatedAgo: '1 hour ago',
+  },
+  {
+    id: 'team-finance',
+    name: 'Finance Operations Team',
+    memberCount: 5,
+    memberSeeds: ['grace-adeyemi', 'noah-lindqvist', 'sana-farooqi', 'milo-becker'],
+    about:
+      'Runs budgeting, vendor contracts, and the monthly close, and partners with every team on spend forecasting and reporting.',
+    stats: [
+      { label: 'Reports', value: '22' },
+      { label: 'Ranking', value: '#3' },
+      { label: 'Budget', value: '$24.8M' },
+    ],
+    progressLabel: 'Close readiness',
+    progressValue: 68,
+    updatedAgo: '3 hours ago',
+  },
+  {
+    id: 'team-growth',
+    name: 'Growth Marketing Team',
+    memberCount: 6,
+    memberSeeds: ['ruby-lachance', 'jamal-osei', 'chiara-ferrante', 'tobin-akana'],
+    about:
+      'Plans campaigns, owns brand voice, and turns product-usage data into acquisition and retention experiments.',
+    stats: [
+      { label: 'Campaigns', value: '15' },
+      { label: 'Reach', value: '980K' },
+      { label: 'Budget', value: '$9.7M' },
+    ],
+    progressLabel: 'Campaign delivery',
+    progressValue: 55,
+    updatedAgo: '50 minutes ago',
+  },
+  {
+    id: 'team-brand',
+    name: 'Brand & Visual Team',
+    memberCount: 4,
+    memberSeeds: ['elin-kowalska', 'davi-nascimento', 'priya-venkat', 'oscar-lindberg'],
+    about:
+      'Produces illustration, motion, and marketing collateral that keeps every touchpoint on-brand across the product and campaigns.',
+    stats: [
+      { label: 'Assets', value: '64' },
+      { label: 'Deliverables', value: '12' },
+      { label: 'Budget', value: '$6.3M' },
+    ],
+    progressLabel: 'Current workload',
+    progressValue: 74,
+    updatedAgo: '20 minutes ago',
+  },
 ]
