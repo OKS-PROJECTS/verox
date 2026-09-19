@@ -41,7 +41,7 @@ export function KpiCard({ label, value, delta, trend, help, icon, tone = 'primar
           </h3>
         </div>
         {(delta || help) && (
-          <p className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-[12.5px]" style={{ color: 'var(--app-fg-muted)' }}>
+          <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-[12.5px]" style={{ color: 'var(--app-fg-muted)' }}>
             {delta && (
               <Chip
                 variant="soft"
@@ -53,7 +53,7 @@ export function KpiCard({ label, value, delta, trend, help, icon, tone = 'primar
               </Chip>
             )}
             {help && <span className="whitespace-nowrap">{help}</span>}
-          </p>
+          </div>
         )}
       </CardBody>
     </Card>
