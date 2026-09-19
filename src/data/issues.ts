@@ -17,6 +17,6 @@ export const ISSUES: Issue[] = [
   { id: 'VRX-465', title: 'Onboarding tour skips step 3 on mobile', assignee: 'Carlos Diaz', priority: 'Medium', status: 'Closed', updated: '3 days ago' },
   { id: 'VRX-459', title: 'Calendar: recurring events not deduped', assignee: 'Jonathan Lee', priority: 'High', status: 'In Progress', updated: '4 days ago' },
   { id: 'VRX-452', title: 'Notification bell badge count is stale', assignee: 'Samantha Reed', priority: 'Low', status: 'Closed', updated: '5 days ago' },
-  { id: 'VRX-448', title: 'Kanban card drag ghost lags on Firefox', assignee: 'Michael Scott', priority: 'Medium', status: 'Review', updated: '6 days ago' },
+  { id: 'VRX-448', title: 'Team card progress bar rounds instead of truncates', assignee: 'Michael Scott', priority: 'Medium', status: 'Review', updated: '6 days ago' },
   { id: 'VRX-440', title: 'Two-factor code field loses focus on paste', assignee: 'Emily Parker', priority: 'Urgent', status: 'Open', updated: '1 week ago' },
 ]

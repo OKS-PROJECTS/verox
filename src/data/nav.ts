@@ -2,7 +2,7 @@ import type { LucideIcon } from 'lucide-react'
 import {
   LayoutGrid,
   Mail,
-  KanbanSquare,
+  Users,
   MessageSquare,
   CalendarDays,
   Receipt,
@@ -96,7 +96,7 @@ export const NAV: NavSection[] = [
           { label: 'Compose', to: '/apps/email/compose' },
         ],
       },
-      { label: 'Team Board', to: '/apps/team-board', icon: KanbanSquare },
+      { label: 'Team Board', to: '/apps/team-board', icon: Users },
       { label: 'Chat', to: '/apps/chat', icon: MessageSquare },
       { label: 'Calendar', to: '/apps/calendar', icon: CalendarDays },
       {
