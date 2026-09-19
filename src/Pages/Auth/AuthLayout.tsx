@@ -29,7 +29,7 @@ export function AuthLayout({ title, subtitle, children, footer, width = 440 }: A
       </Card>
       {footer}
       <p className="text-xs" style={{ color: 'var(--app-fg-subtle)' }}>
-        © {new Date().getFullYear()} Verox. All rights reserved.
+        © {new Date().getFullYear()} Verox. Built entirely with oks-ui.
       </p>
     </div>
   )

@@ -10,123 +10,134 @@
   --oks-font-sans: 'Plus Jakarta Sans', 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --app-font-heading: 'Hanken Grotesk', var(--oks-font-sans);
 
-  /* ---- brand ramp (around reference primary #3F72AF) ---- */
-  --oks-palette-brand-50: #eff4fa;
-  --oks-palette-brand-100: #dce7f3;
-  --oks-palette-brand-200: #bbd2e8;
-  --oks-palette-brand-300: #93b7d9;
-  --oks-palette-brand-400: #6996c5;
-  --oks-palette-brand-500: #3f72af;
-  --oks-palette-brand-600: #335d91;
-  --oks-palette-brand-700: #2a4b76;
-  --oks-palette-brand-800: #243f61;
-  --oks-palette-brand-900: #203653;
-  --oks-palette-brand-950: #142236;
+  /*
+   * Every ramp below collides by name with an oks-ui built-in token:
+   * primary, secondary, success, warning, danger, info, default, border
+   * and surface are all real oks-ui color roles too, each aliased once
+   * to the oks-ui default palette. Same-specificity ties against those
+   * declarations resolve unpredictably per page, depending on internal
+   * chunk concatenation order, so every value here is !important — see
+   * the matching, fuller note in the dark block below and
+   * OKS-UI-FEEDBACK.md.
+   */
 
-  --oks-color-primary-50: var(--oks-palette-brand-50);
-  --oks-color-primary-100: var(--oks-palette-brand-100);
-  --oks-color-primary-200: var(--oks-palette-brand-200);
-  --oks-color-primary-300: var(--oks-palette-brand-300);
-  --oks-color-primary-400: var(--oks-palette-brand-400);
-  --oks-color-primary-500: var(--oks-palette-brand-500);
-  --oks-color-primary-600: var(--oks-palette-brand-600);
-  --oks-color-primary-700: var(--oks-palette-brand-700);
-  --oks-color-primary-800: var(--oks-palette-brand-800);
-  --oks-color-primary-900: var(--oks-palette-brand-900);
-  --oks-color-primary-950: var(--oks-palette-brand-950);
+  /* ---- brand ramp (around reference primary #3F72AF) ---- */
+  --oks-palette-brand-50: #eff4fa !important;
+  --oks-palette-brand-100: #dce7f3 !important;
+  --oks-palette-brand-200: #bbd2e8 !important;
+  --oks-palette-brand-300: #93b7d9 !important;
+  --oks-palette-brand-400: #6996c5 !important;
+  --oks-palette-brand-500: #3f72af !important;
+  --oks-palette-brand-600: #335d91 !important;
+  --oks-palette-brand-700: #2a4b76 !important;
+  --oks-palette-brand-800: #243f61 !important;
+  --oks-palette-brand-900: #203653 !important;
+  --oks-palette-brand-950: #142236 !important;
+
+  --oks-color-primary-50: var(--oks-palette-brand-50) !important;
+  --oks-color-primary-100: var(--oks-palette-brand-100) !important;
+  --oks-color-primary-200: var(--oks-palette-brand-200) !important;
+  --oks-color-primary-300: var(--oks-palette-brand-300) !important;
+  --oks-color-primary-400: var(--oks-palette-brand-400) !important;
+  --oks-color-primary-500: var(--oks-palette-brand-500) !important;
+  --oks-color-primary-600: var(--oks-palette-brand-600) !important;
+  --oks-color-primary-700: var(--oks-palette-brand-700) !important;
+  --oks-color-primary-800: var(--oks-palette-brand-800) !important;
+  --oks-color-primary-900: var(--oks-palette-brand-900) !important;
+  --oks-color-primary-950: var(--oks-palette-brand-950) !important;
 
   /* ---- secondary (periwinkle #7286D3) ---- */
-  --oks-color-secondary-50: #f1f3fc;
-  --oks-color-secondary-100: #e1e6f8;
-  --oks-color-secondary-200: #c5cef1;
-  --oks-color-secondary-300: #a2afe7;
-  --oks-color-secondary-400: #8c9bdd;
-  --oks-color-secondary-500: #7286d3;
-  --oks-color-secondary-600: #5b6bb8;
-  --oks-color-secondary-700: #4a5697;
-  --oks-color-secondary-800: #3d477a;
-  --oks-color-secondary-900: #343d63;
-  --oks-color-secondary-950: #212642;
+  --oks-color-secondary-50: #f1f3fc !important;
+  --oks-color-secondary-100: #e1e6f8 !important;
+  --oks-color-secondary-200: #c5cef1 !important;
+  --oks-color-secondary-300: #a2afe7 !important;
+  --oks-color-secondary-400: #8c9bdd !important;
+  --oks-color-secondary-500: #7286d3 !important;
+  --oks-color-secondary-600: #5b6bb8 !important;
+  --oks-color-secondary-700: #4a5697 !important;
+  --oks-color-secondary-800: #3d477a !important;
+  --oks-color-secondary-900: #343d63 !important;
+  --oks-color-secondary-950: #212642 !important;
 
   /* ---- success (#63A361) ---- */
-  --oks-color-success-50: #f1f8f0;
-  --oks-color-success-100: #dfeedd;
-  --oks-color-success-200: #c0debc;
-  --oks-color-success-300: #9bca96;
-  --oks-color-success-400: #7eb878;
-  --oks-color-success-500: #63a361;
-  --oks-color-success-600: #4e8a4c;
-  --oks-color-success-700: #406f3e;
-  --oks-color-success-800: #365935;
-  --oks-color-success-900: #2d492d;
-  --oks-color-success-950: #172717;
+  --oks-color-success-50: #f1f8f0 !important;
+  --oks-color-success-100: #dfeedd !important;
+  --oks-color-success-200: #c0debc !important;
+  --oks-color-success-300: #9bca96 !important;
+  --oks-color-success-400: #7eb878 !important;
+  --oks-color-success-500: #63a361 !important;
+  --oks-color-success-600: #4e8a4c !important;
+  --oks-color-success-700: #406f3e !important;
+  --oks-color-success-800: #365935 !important;
+  --oks-color-success-900: #2d492d !important;
+  --oks-color-success-950: #172717 !important;
 
   /* ---- warning (#FFC26F) ---- */
-  --oks-color-warning-50: #fff8ee;
-  --oks-color-warning-100: #feedd3;
-  --oks-color-warning-200: #fdd8a5;
-  --oks-color-warning-300: #fcc077;
-  --oks-color-warning-400: #ffc98a;
-  --oks-color-warning-500: #ffc26f;
-  --oks-color-warning-600: #f2a63d;
-  --oks-color-warning-700: #cb8228;
-  --oks-color-warning-800: #a3671f;
-  --oks-color-warning-900: #7a4e18;
-  --oks-color-warning-950: #422a0c;
+  --oks-color-warning-50: #fff8ee !important;
+  --oks-color-warning-100: #feedd3 !important;
+  --oks-color-warning-200: #fdd8a5 !important;
+  --oks-color-warning-300: #fcc077 !important;
+  --oks-color-warning-400: #ffc98a !important;
+  --oks-color-warning-500: #ffc26f !important;
+  --oks-color-warning-600: #f2a63d !important;
+  --oks-color-warning-700: #cb8228 !important;
+  --oks-color-warning-800: #a3671f !important;
+  --oks-color-warning-900: #7a4e18 !important;
+  --oks-color-warning-950: #422a0c !important;
 
   /* ---- danger (#FC5185) ---- */
-  --oks-color-danger-50: #fff0f4;
-  --oks-color-danger-100: #ffdce6;
-  --oks-color-danger-200: #feb9d0;
-  --oks-color-danger-300: #fe8eb3;
-  --oks-color-danger-400: #fd6c9c;
-  --oks-color-danger-500: #fc5185;
-  --oks-color-danger-600: #e22f67;
-  --oks-color-danger-700: #bc2555;
-  --oks-color-danger-800: #942047;
-  --oks-color-danger-900: #7a1e3f;
-  --oks-color-danger-950: #440d20;
+  --oks-color-danger-50: #fff0f4 !important;
+  --oks-color-danger-100: #ffdce6 !important;
+  --oks-color-danger-200: #feb9d0 !important;
+  --oks-color-danger-300: #fe8eb3 !important;
+  --oks-color-danger-400: #fd6c9c !important;
+  --oks-color-danger-500: #fc5185 !important;
+  --oks-color-danger-600: #e22f67 !important;
+  --oks-color-danger-700: #bc2555 !important;
+  --oks-color-danger-800: #942047 !important;
+  --oks-color-danger-900: #7a1e3f !important;
+  --oks-color-danger-950: #440d20 !important;
 
   /* ---- info (#3FC1C9) ---- */
-  --oks-color-info-50: #eefbfc;
-  --oks-color-info-100: #d3f3f5;
-  --oks-color-info-200: #a9e7ea;
-  --oks-color-info-300: #74d7dc;
-  --oks-color-info-400: #4bcbd1;
-  --oks-color-info-500: #3fc1c9;
-  --oks-color-info-600: #2c9ca3;
-  --oks-color-info-700: #257d83;
-  --oks-color-info-800: #216469;
-  --oks-color-info-900: #1f5257;
-  --oks-color-info-950: #0e2f33;
+  --oks-color-info-50: #eefbfc !important;
+  --oks-color-info-100: #d3f3f5 !important;
+  --oks-color-info-200: #a9e7ea !important;
+  --oks-color-info-300: #74d7dc !important;
+  --oks-color-info-400: #4bcbd1 !important;
+  --oks-color-info-500: #3fc1c9 !important;
+  --oks-color-info-600: #2c9ca3 !important;
+  --oks-color-info-700: #257d83 !important;
+  --oks-color-info-800: #216469 !important;
+  --oks-color-info-900: #1f5257 !important;
+  --oks-color-info-950: #0e2f33 !important;
 
   /* ---- neutral / default (chrome: Tabs solid track, Nav, dropdown, etc.) ---- */
-  --oks-color-default-50: #f9f9fa;
-  --oks-color-default-100: #f1f1f3;
-  --oks-color-default-200: #e5e6e7;
-  --oks-color-default-300: #d4d5d8;
-  --oks-color-default-400: #abaeb4;
-  --oks-color-default-500: #82868f;
-  --oks-color-default-600: #63666e;
-  --oks-color-default-700: #4c4c5c;
-  --oks-color-default-800: #34343f;
-  --oks-color-default-900: #202028;
-  --oks-color-default-950: #121216;
+  --oks-color-default-50: #f9f9fa !important;
+  --oks-color-default-100: #f1f1f3 !important;
+  --oks-color-default-200: #e5e6e7 !important;
+  --oks-color-default-300: #d4d5d8 !important;
+  --oks-color-default-400: #abaeb4 !important;
+  --oks-color-default-500: #82868f !important;
+  --oks-color-default-600: #63666e !important;
+  --oks-color-default-700: #4c4c5c !important;
+  --oks-color-default-800: #34343f !important;
+  --oks-color-default-900: #202028 !important;
+  --oks-color-default-950: #121216 !important;
 
-  --oks-color-neutral-50: var(--oks-color-default-50);
-  --oks-color-neutral-100: var(--oks-color-default-100);
-  --oks-color-neutral-200: var(--oks-color-default-200);
-  --oks-color-neutral-300: var(--oks-color-default-300);
-  --oks-color-neutral-400: var(--oks-color-default-400);
-  --oks-color-neutral-500: var(--oks-color-default-500);
-  --oks-color-neutral-600: var(--oks-color-default-600);
-  --oks-color-neutral-700: var(--oks-color-default-700);
-  --oks-color-neutral-800: var(--oks-color-default-800);
-  --oks-color-neutral-900: var(--oks-color-default-900);
-  --oks-color-neutral-950: var(--oks-color-default-950);
+  --oks-color-neutral-50: var(--oks-color-default-50) !important;
+  --oks-color-neutral-100: var(--oks-color-default-100) !important;
+  --oks-color-neutral-200: var(--oks-color-default-200) !important;
+  --oks-color-neutral-300: var(--oks-color-default-300) !important;
+  --oks-color-neutral-400: var(--oks-color-default-400) !important;
+  --oks-color-neutral-500: var(--oks-color-default-500) !important;
+  --oks-color-neutral-600: var(--oks-color-default-600) !important;
+  --oks-color-neutral-700: var(--oks-color-default-700) !important;
+  --oks-color-neutral-800: var(--oks-color-default-800) !important;
+  --oks-color-neutral-900: var(--oks-color-default-900) !important;
+  --oks-color-neutral-950: var(--oks-color-default-950) !important;
 
-  --oks-color-border: var(--oks-color-default-200);
-  --oks-color-surface: #ffffff;
+  --oks-color-border: var(--oks-color-default-200) !important;
+  --oks-color-surface: #ffffff !important;
 
   /* extra chart-only hue (purple accent, seen on a couple of series) */
   --app-chart-extra: #9b5de0;
@@ -203,9 +214,142 @@
 }
 
 :root[data-theme='dark'] {
-  --oks-color-surface: #1e1f27;
-  --oks-color-border: #293036;
-  --oks-color-default-200: #293036;
+  --oks-color-surface: #1e1f27 !important;
+  --oks-color-border: #293036 !important;
+
+  /*
+   * Brand/semantic color ramps (:root, light-mode-only above) are read
+   * directly by oks-ui for far more than backgrounds — e.g. the Button
+   * solid variant picks black-or-white label text at runtime based on
+   * which one contrasts better against the current fill (internal/
+   * onFill.ts, "deepen"), on the assumption that a dark theme 700-ish
+   * stop is a light fill (since the oks-ui bundled palettes invert
+   * 50<->950 for dark mode). Our brand ramps did not invert, so in dark
+   * mode oks-ui picked black label text for what was still our
+   * un-inverted, dark primary-700 fill — unreadable. Mirroring each ramp
+   * here (50<->950, 100<->900, ... 500 held constant so the brand hue
+   * stays recognizable) fixes both that and every soft/bordered/ghost
+   * variant that reads the light-tinted low stops for a background and
+   * the deep high stops for text.
+   *
+   * `!important` throughout this block is load-bearing, not defensive:
+   * oks-ui ships its own tokens under these exact names — primary,
+   * secondary, success, warning, danger, info and default are all real
+   * oks-ui color roles too (their neutral scale is literally called
+   * default), each aliased once, unconditionally, to the oks-ui default
+   * palette. That declaration and ours are the same specificity, so
+   * without !important the winner came down to internal stylesheet
+   * concatenation order across the several oks-ui chunked CSS files,
+   * which silently ate every dark-mode override below depending on the
+   * page. Logged in OKS-UI-FEEDBACK.md.
+   */
+  --oks-palette-brand-50: #142236 !important;
+  --oks-palette-brand-100: #203653 !important;
+  --oks-palette-brand-200: #243f61 !important;
+  --oks-palette-brand-300: #2a4b76 !important;
+  --oks-palette-brand-400: #335d91 !important;
+  --oks-palette-brand-500: #3f72af !important;
+  --oks-palette-brand-600: #6996c5 !important;
+  --oks-palette-brand-700: #93b7d9 !important;
+  --oks-palette-brand-800: #bbd2e8 !important;
+  --oks-palette-brand-900: #dce7f3 !important;
+  --oks-palette-brand-950: #eff4fa !important;
+
+  --oks-color-primary-50: var(--oks-palette-brand-50) !important;
+  --oks-color-primary-100: var(--oks-palette-brand-100) !important;
+  --oks-color-primary-200: var(--oks-palette-brand-200) !important;
+  --oks-color-primary-300: var(--oks-palette-brand-300) !important;
+  --oks-color-primary-400: var(--oks-palette-brand-400) !important;
+  --oks-color-primary-500: var(--oks-palette-brand-500) !important;
+  --oks-color-primary-600: var(--oks-palette-brand-600) !important;
+  --oks-color-primary-700: var(--oks-palette-brand-700) !important;
+  --oks-color-primary-800: var(--oks-palette-brand-800) !important;
+  --oks-color-primary-900: var(--oks-palette-brand-900) !important;
+  --oks-color-primary-950: var(--oks-palette-brand-950) !important;
+
+  --oks-color-secondary-50: #212642 !important;
+  --oks-color-secondary-100: #343d63 !important;
+  --oks-color-secondary-200: #3d477a !important;
+  --oks-color-secondary-300: #4a5697 !important;
+  --oks-color-secondary-400: #5b6bb8 !important;
+  --oks-color-secondary-500: #7286d3 !important;
+  --oks-color-secondary-600: #8c9bdd !important;
+  --oks-color-secondary-700: #a2afe7 !important;
+  --oks-color-secondary-800: #c5cef1 !important;
+  --oks-color-secondary-900: #e1e6f8 !important;
+  --oks-color-secondary-950: #f1f3fc !important;
+
+  --oks-color-success-50: #172717 !important;
+  --oks-color-success-100: #2d492d !important;
+  --oks-color-success-200: #365935 !important;
+  --oks-color-success-300: #406f3e !important;
+  --oks-color-success-400: #4e8a4c !important;
+  --oks-color-success-500: #63a361 !important;
+  --oks-color-success-600: #7eb878 !important;
+  --oks-color-success-700: #9bca96 !important;
+  --oks-color-success-800: #c0debc !important;
+  --oks-color-success-900: #dfeedd !important;
+  --oks-color-success-950: #f1f8f0 !important;
+
+  --oks-color-warning-50: #422a0c !important;
+  --oks-color-warning-100: #7a4e18 !important;
+  --oks-color-warning-200: #a3671f !important;
+  --oks-color-warning-300: #cb8228 !important;
+  --oks-color-warning-400: #f2a63d !important;
+  --oks-color-warning-500: #ffc26f !important;
+  --oks-color-warning-600: #ffc98a !important;
+  --oks-color-warning-700: #fcc077 !important;
+  --oks-color-warning-800: #fdd8a5 !important;
+  --oks-color-warning-900: #feedd3 !important;
+  --oks-color-warning-950: #fff8ee !important;
+
+  --oks-color-danger-50: #440d20 !important;
+  --oks-color-danger-100: #7a1e3f !important;
+  --oks-color-danger-200: #942047 !important;
+  --oks-color-danger-300: #bc2555 !important;
+  --oks-color-danger-400: #e22f67 !important;
+  --oks-color-danger-500: #fc5185 !important;
+  --oks-color-danger-600: #fd6c9c !important;
+  --oks-color-danger-700: #fe8eb3 !important;
+  --oks-color-danger-800: #feb9d0 !important;
+  --oks-color-danger-900: #ffdce6 !important;
+  --oks-color-danger-950: #fff0f4 !important;
+
+  --oks-color-info-50: #0e2f33 !important;
+  --oks-color-info-100: #1f5257 !important;
+  --oks-color-info-200: #216469 !important;
+  --oks-color-info-300: #257d83 !important;
+  --oks-color-info-400: #2c9ca3 !important;
+  --oks-color-info-500: #3fc1c9 !important;
+  --oks-color-info-600: #4bcbd1 !important;
+  --oks-color-info-700: #74d7dc !important;
+  --oks-color-info-800: #a9e7ea !important;
+  --oks-color-info-900: #d3f3f5 !important;
+  --oks-color-info-950: #eefbfc !important;
+
+  --oks-color-default-50: #1e1f27 !important;
+  --oks-color-default-100: #22232c !important;
+  --oks-color-default-200: #293036 !important;
+  --oks-color-default-300: #384049 !important;
+  --oks-color-default-400: #4a5560 !important;
+  --oks-color-default-500: #626a76 !important;
+  --oks-color-default-600: #8791a0 !important;
+  --oks-color-default-700: #aab8c5 !important;
+  --oks-color-default-800: #ced6df !important;
+  --oks-color-default-900: #eef1f4 !important;
+  --oks-color-default-950: #f6f8fa !important;
+
+  --oks-color-neutral-50: var(--oks-color-default-50) !important;
+  --oks-color-neutral-100: var(--oks-color-default-100) !important;
+  --oks-color-neutral-200: var(--oks-color-default-200) !important;
+  --oks-color-neutral-300: var(--oks-color-default-300) !important;
+  --oks-color-neutral-400: var(--oks-color-default-400) !important;
+  --oks-color-neutral-500: var(--oks-color-default-500) !important;
+  --oks-color-neutral-600: var(--oks-color-default-600) !important;
+  --oks-color-neutral-700: var(--oks-color-default-700) !important;
+  --oks-color-neutral-800: var(--oks-color-default-800) !important;
+  --oks-color-neutral-900: var(--oks-color-default-900) !important;
+  --oks-color-neutral-950: var(--oks-color-default-950) !important;
 
   --app-bg: #17181e;
   --app-surface: #1e1f27;
