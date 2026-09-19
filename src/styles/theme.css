@@ -306,6 +306,41 @@
   stroke-linecap: butt;
 }
 
+/*
+ * Calendar (event-calendar) — oks-ui's Calendar is a compact date-picker:
+ * `.oksCalendarDay`/`.oksCalendarDayButton` are fixed equal width+height
+ * squares driven by one `--oks-calendar-cell` var, and the root is
+ * `display:inline-flex` (shrink-wrapped). Turning it into a full month
+ * event grid needs the width/height decoupled and the day button
+ * top/left-aligned instead of centered — scoped to `.event-calendar` so a
+ * plain Calendar elsewhere (e.g. a date-field popover) keeps the compact
+ * picker look.
+ */
+.event-calendar {
+  display: flex;
+  width: 100%;
+  border: none;
+  padding: 0;
+}
+.event-calendar .oksCalendarGrid {
+  width: 100%;
+}
+.event-calendar .oksCalendarWeekday {
+  width: auto;
+  height: 32px;
+}
+.event-calendar .oksCalendarDay {
+  width: auto;
+  height: 104px;
+  padding: 3px;
+  vertical-align: top;
+}
+.event-calendar .oksCalendarDayButton {
+  align-items: stretch;
+  justify-content: flex-start;
+  border-radius: 6px;
+}
+
 body {
   background: var(--app-bg);
   color: var(--app-fg);
