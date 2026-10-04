@@ -14,9 +14,9 @@ export default function FormsValidation() {
       />
       <Card>
         <CardHeader>
-          <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+          <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
             Create account
-          </h3>
+          </h2>
         </CardHeader>
         <CardBody className="pt-0">
           {submitted && <Alert className="mb-4" color="success" variant="soft" title="All fields valid" description="The form passed every validation rule." />}

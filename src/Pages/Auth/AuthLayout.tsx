@@ -12,7 +12,7 @@ interface AuthLayoutProps {
 
 export function AuthLayout({ title, subtitle, children, footer, width = 440 }: AuthLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-6 px-4 py-10" style={{ background: 'var(--app-bg)' }}>
+    <main className="flex min-h-screen flex-col items-center justify-center gap-6 px-4 py-10" style={{ background: 'var(--app-bg)' }}>
       <Logo />
       <div className="text-center">
         <h1 className="text-[19px] font-bold" style={{ color: 'var(--app-fg-strong)' }}>
@@ -31,6 +31,6 @@ export function AuthLayout({ title, subtitle, children, footer, width = 440 }: A
       <p className="text-xs" style={{ color: 'var(--app-fg-subtle)' }}>
         © {new Date().getFullYear()} Verox. Built entirely with oks-ui.
       </p>
-    </div>
+    </main>
   )
 }

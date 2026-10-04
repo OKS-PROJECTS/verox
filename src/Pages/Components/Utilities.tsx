@@ -26,9 +26,9 @@ export default function Utilities() {
         {TOKEN_GROUPS.map((group) => (
           <Card key={group.title}>
             <CardHeader>
-              <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+              <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                 {group.title}
-              </h3>
+              </h2>
             </CardHeader>
             <CardBody className="flex flex-wrap items-end gap-5 pt-0">
               {group.tokens.map((t) => (
@@ -44,9 +44,9 @@ export default function Utilities() {
         ))}
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Layout rule
-            </h3>
+            </h2>
           </CardHeader>
           <CardBody className="pt-0 text-[13px]" style={{ color: 'var(--app-fg-muted)' }}>
             Every responsive grid declares a base column count —{' '}

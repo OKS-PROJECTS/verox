@@ -13,9 +13,9 @@ export function DetailPage({ config }: { config: DetailPageConfig }) {
           {sections.map((section) => (
             <Card key={section.title}>
               <CardHeader>
-                <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+                <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                   {section.title}
-                </h3>
+                </h2>
               </CardHeader>
               <CardBody className="pt-0">
                 <dl>

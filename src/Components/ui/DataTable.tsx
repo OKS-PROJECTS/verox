@@ -89,9 +89,9 @@ export function DataTable<Row extends Record<string, unknown>>({
         <CardHeader className="flex flex-wrap items-center justify-between gap-3">
           <div>
             {title && (
-              <h3 className="text-[15px] font-medium" style={{ color: 'var(--app-fg)' }}>
+              <h2 className="text-[15px] font-medium" style={{ color: 'var(--app-fg)' }}>
                 {title}
-              </h3>
+              </h2>
             )}
             {subtitle && (
               <p className="mt-0.5 text-[12px]" style={{ color: 'var(--app-fg-muted)' }}>

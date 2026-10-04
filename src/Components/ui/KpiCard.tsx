@@ -24,9 +24,9 @@ export function KpiCard({ label, value, delta, trend, help, icon, tone = 'primar
   return (
     <Card className="h-full">
       <CardHeader>
-        <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+        <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
           {label}
-        </h3>
+        </h2>
       </CardHeader>
       <CardBody className="pt-0">
         <div className="mb-2 flex items-center justify-center gap-3 py-1">
@@ -36,9 +36,9 @@ export function KpiCard({ label, value, delta, trend, help, icon, tone = 'primar
           >
             {icon}
           </span>
-          <h3 className="text-[24px] font-bold leading-none" style={{ color: 'var(--app-fg-strong)' }}>
+          <p className="text-[24px] font-bold leading-none" style={{ color: 'var(--app-fg-strong)' }}>
             {value}
-          </h3>
+          </p>
         </div>
         {(delta || help) && (
           <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-[12.5px]" style={{ color: 'var(--app-fg-muted)' }}>

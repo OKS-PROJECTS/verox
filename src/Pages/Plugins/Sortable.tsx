@@ -49,9 +49,9 @@ export default function Sortable() {
 
       <Card className="mx-auto max-w-xl">
         <CardHeader>
-          <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+          <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
             This week's priorities
-          </h3>
+          </h2>
           <p className="mt-0.5 text-[12px]" style={{ color: 'var(--app-fg-muted)' }}>
             Drag a row, or use the up/down controls — both reorder the list.
           </p>

@@ -34,9 +34,9 @@ export function FormPage({ config }: { config: FormPageConfig }) {
           <Card key={group.title ?? gi}>
             {group.title && (
               <CardHeader>
-                <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+                <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                   {group.title}
-                </h3>
+                </h2>
               </CardHeader>
             )}
             <CardBody className={group.title ? 'pt-0' : undefined}>

@@ -5,7 +5,22 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
-> Requires oks-ui ^1.2.0
+> Requires oks-ui ^1.3.2
+
+## [1.0.1] — 2026-10-04
+
+### Changed
+
+- Updated to oks-ui `^1.3.2`; removed the unused `clsx` and `date-fns` dependencies.
+
+### Fixed
+
+- Text contrast meets WCAG AA (4.5:1) in light and dark: muted and subtle text,
+  menu headings and section titles, status colours, the active menu item and
+  chat meta text.
+- Every page has a `<main>` landmark (app shell, auth and error screens).
+- Card titles use `h2` and the KPI value is no longer a heading, so heading
+  order no longer skips a level.
 
 ## [1.0.0] — 2026-09-19
 

@@ -35,9 +35,9 @@ export default function FormsTextEditors() {
       />
       <Card>
         <CardHeader>
-          <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+          <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
             Changelog entry
-          </h3>
+          </h2>
         </CardHeader>
         <CardBody className="pt-0">
           <TextEditor value={value} onChange={setValue} />

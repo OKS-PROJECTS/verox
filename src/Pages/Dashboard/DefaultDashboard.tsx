@@ -123,9 +123,9 @@ export default function DefaultDashboard() {
 
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Goal Achievement Metrics
-            </h3>
+            </h2>
           </CardHeader>
           <CardBody className="pt-0">
             <div className="mb-4 flex justify-center">
@@ -161,9 +161,9 @@ export default function DefaultDashboard() {
         <Card>
           <CardHeader className="flex items-center gap-2">
             <Globe size={16} style={{ color: 'var(--app-primary)' }} />
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Regional Sales Distribution
-            </h3>
+            </h2>
           </CardHeader>
           <CardBody className="pt-0">
             <p className="mb-3 text-[11.5px]" style={{ color: 'var(--app-fg-subtle)' }}>
@@ -216,9 +216,9 @@ export default function DefaultDashboard() {
 
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Top Countries
-            </h3>
+            </h2>
           </CardHeader>
           <CardBody className="pt-0">
             <ul className="flex flex-col gap-3">

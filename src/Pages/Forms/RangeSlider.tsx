@@ -11,9 +11,9 @@ export default function FormsRangeSlider() {
       />
       <Card>
         <CardHeader>
-          <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+          <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
             Campaign budget
-          </h3>
+          </h2>
         </CardHeader>
         <CardBody className="flex flex-col gap-8 pt-0">
           <RangeField name="budget" label="Monthly budget" min={0} max={5000} step={50} defaultValue={1200} showValue formatValue={(n) => `$${n}`} />

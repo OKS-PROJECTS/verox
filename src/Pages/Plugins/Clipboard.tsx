@@ -56,9 +56,9 @@ export default function ClipboardPage() {
         {SNIPPETS.map((snippet) => (
           <Card key={snippet.key}>
             <CardHeader>
-              <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+              <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
                 {snippet.title}
-              </h3>
+              </h2>
               <p className="mt-0.5 text-[12px]" style={{ color: 'var(--app-fg-muted)' }}>
                 {snippet.description}
               </p>

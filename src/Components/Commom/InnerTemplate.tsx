@@ -29,7 +29,9 @@ export function InnerTemplate() {
       <div className="flex min-w-0 flex-1 flex-col">
         <Header onOpenMobileNav={() => setIsMobileNavOpen(true)} onOpenSettings={() => setIsSettingsOpen(true)} />
         <div ref={mainRef} className="app-shell-content flex-1 overflow-y-auto px-4 pb-2 pt-5 lg:px-6">
-          <Outlet />
+          <main>
+            <Outlet />
+          </main>
           <Footer />
         </div>
       </div>

@@ -44,9 +44,9 @@ export default function I18n() {
       <div className="mx-auto flex max-w-lg flex-col gap-5">
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Display language
-            </h3>
+            </h2>
           </CardHeader>
           <CardBody className="pt-0">
             <SelectField
@@ -68,9 +68,9 @@ export default function I18n() {
 
         <Card>
           <CardHeader className="flex items-center justify-between">
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Live preview
-            </h3>
+            </h2>
             <Chip size="sm" variant="bordered" color="default">
               {LANGUAGES.find((l) => l.code === lang)?.region}
             </Chip>

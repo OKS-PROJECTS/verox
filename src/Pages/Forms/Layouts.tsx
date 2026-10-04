@@ -12,9 +12,9 @@ export default function FormsLayouts() {
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Top label (default)
-            </h3>
+            </h2>
           </CardHeader>
           <CardBody className="flex flex-col gap-4 pt-0">
             <Form onSubmit={() => {}} className="flex flex-col gap-4">
@@ -25,9 +25,9 @@ export default function FormsLayouts() {
         </Card>
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Left label
-            </h3>
+            </h2>
           </CardHeader>
           <CardBody className="flex flex-col gap-4 pt-0">
             <Form onSubmit={() => {}} className="flex flex-col gap-4">
@@ -38,9 +38,9 @@ export default function FormsLayouts() {
         </Card>
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Floating label
-            </h3>
+            </h2>
           </CardHeader>
           <CardBody className="flex flex-col gap-4 pt-0">
             <Form onSubmit={() => {}} className="flex flex-col gap-4">
@@ -51,9 +51,9 @@ export default function FormsLayouts() {
         </Card>
         <Card>
           <CardHeader>
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Inline / two-column
-            </h3>
+            </h2>
           </CardHeader>
           <CardBody className="pt-0">
             <Form onSubmit={() => {}} className="grid grid-cols-2 gap-4">

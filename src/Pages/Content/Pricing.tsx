@@ -85,9 +85,9 @@ export default function Pricing() {
           >
             <CardHeader className="flex flex-col items-start gap-2">
               <div className="flex w-full items-center justify-between">
-                <h3 className="text-[15px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+                <h2 className="text-[15px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
                   {tier.name}
-                </h3>
+                </h2>
                 {tier.highlighted && (
                   <Chip color="primary" variant="soft" size="sm">
                     Popular
@@ -131,9 +131,9 @@ export default function Pricing() {
 
       <Card className="mt-6">
         <CardHeader>
-          <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+          <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
             Feature comparison
-          </h3>
+          </h2>
         </CardHeader>
         <CardBody className="pt-0">
           <Table

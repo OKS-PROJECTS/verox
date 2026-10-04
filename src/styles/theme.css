@@ -80,7 +80,7 @@
   --oks-color-warning-400: #ffc98a !important;
   --oks-color-warning-500: #ffc26f !important;
   --oks-color-warning-600: #f2a63d !important;
-  --oks-color-warning-700: #cb8228 !important;
+  --oks-color-warning-700: #8a5a12 !important;
   --oks-color-warning-800: #a3671f !important;
   --oks-color-warning-900: #7a4e18 !important;
   --oks-color-warning-950: #422a0c !important;
@@ -158,8 +158,8 @@
   --app-border-strong: #d4d5d8;
   --app-fg-strong: #1c1d21;
   --app-fg: #4c4c5c;
-  --app-fg-muted: #82868f;
-  --app-fg-subtle: #abaeb4;
+  --app-fg-muted: #5f636c;
+  --app-fg-subtle: #6b6f78;
 
   --app-card-radius: 8px;
   --app-card-border: 1px solid var(--app-border);
@@ -167,11 +167,11 @@
 
   --app-menu-bg: #ffffff;
   --app-menu-fg: #4c4c5c;
-  --app-menu-fg-muted: #82868f;
+  --app-menu-fg-muted: #5f636c;
   --app-menu-active-bg: #f4f8fd;
   --app-menu-active-fg: var(--oks-color-primary-600);
   --app-menu-border: #eef0f2;
-  --app-menu-heading: #abaeb4;
+  --app-menu-heading: #6b6f78;
 
   --app-header-bg: #ffffff;
   --app-header-height: 65px;
@@ -181,15 +181,15 @@
   --app-sidenav-width-collapsed: 76px;
 
   /* semantic aliases — reference other --app-* tokens so they cascade to dark */
-  --app-accent: var(--oks-color-primary-500);
+  --app-accent: var(--oks-color-primary-600);
   --app-accent-soft: var(--oks-color-primary-50);
-  --app-ok: var(--oks-color-success-500);
+  --app-ok: var(--oks-color-success-700);
   --app-ok-soft: var(--oks-color-success-50);
-  --app-warn: var(--oks-color-warning-600);
+  --app-warn: var(--oks-color-warning-700);
   --app-warn-soft: var(--oks-color-warning-50);
-  --app-bad: var(--oks-color-danger-500);
+  --app-bad: var(--oks-color-danger-700);
   --app-bad-soft: var(--oks-color-danger-50);
-  --app-info: var(--oks-color-info-500);
+  --app-info: var(--oks-color-info-700);
   --app-info-soft: var(--oks-color-info-50);
 
   --app-primary: var(--app-accent);
@@ -358,18 +358,18 @@
   --app-border-strong: #384049;
   --app-fg-strong: #eef1f4;
   --app-fg: #aab8c5;
-  --app-fg-muted: #8791a0;
-  --app-fg-subtle: #626a76;
+  --app-fg-muted: #9aa4b2;
+  --app-fg-subtle: #919baa;
 
   --app-card-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
 
   --app-menu-bg: #1e1f27;
   --app-menu-fg: #aab8c5;
-  --app-menu-fg-muted: #737d89;
+  --app-menu-fg-muted: #919baa;
   --app-menu-active-bg: #22232c;
   --app-menu-active-fg: #ced6df;
   --app-menu-border: #262731;
-  --app-menu-heading: #575f6a;
+  --app-menu-heading: #919baa;
 
   --app-header-bg: #252630;
   --app-header-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
@@ -385,7 +385,7 @@
   --oks-form-field-fg: var(--app-fg-strong);
   --oks-form-field-border: #384049;
   --oks-form-field-border-hover: #4a5560;
-  --oks-form-field-placeholder: #626a76;
+  --oks-form-field-placeholder: #919baa;
   --oks-form-field-label: var(--app-fg);
   --oks-form-field-muted: var(--app-fg-muted);
 }
@@ -502,11 +502,11 @@ h1, h2, h3, h4, h5, h6 {
 :root[data-menu-color='dark'] {
   --app-menu-bg: #1e1f27;
   --app-menu-fg: #aab8c5;
-  --app-menu-fg-muted: #737d89;
+  --app-menu-fg-muted: #919baa;
   --app-menu-active-bg: #22232c;
   --app-menu-active-fg: #ced6df;
   --app-menu-border: #262731;
-  --app-menu-heading: #575f6a;
+  --app-menu-heading: #919baa;
 }
 
 :root[data-menu-color='gray'] {
@@ -555,4 +555,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 :root[data-sidenav-size='hover'] .app-sidebar:hover {
   width: var(--app-sidenav-width);
+}
+
+/* Sidebar section titles: the library mixes currentColor at 85% opacity, which drops under 4.5:1. */
+.oksNavSectionTitle {
+  color: var(--app-menu-heading);
+}
+
+:root[data-theme='dark'] .oksNav {
+  --oks-nav-fg-active: var(--oks-color-primary-700);
 }

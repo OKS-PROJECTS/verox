@@ -64,9 +64,9 @@ export default function TeamBoard() {
           <Card key={team.id} className="h-full">
             <CardHeader className="flex items-start justify-between gap-2">
               <div className="flex items-center gap-2">
-                <h3 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
+                <h2 className="text-[14px] font-semibold" style={{ color: 'var(--app-fg-strong)' }}>
                   {team.name}
-                </h3>
+                </h2>
                 {team.isNew && (
                   <Chip size="sm" color="primary" variant="soft">
                     New

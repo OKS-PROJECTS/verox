@@ -13,7 +13,7 @@ interface ErrorLayoutProps {
 export function ErrorLayout({ code, title, description, icon }: ErrorLayoutProps) {
   const navigate = useNavigate()
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-6 px-4 text-center" style={{ background: 'var(--app-bg)' }}>
+    <main className="flex min-h-screen flex-col items-center justify-center gap-6 px-4 text-center" style={{ background: 'var(--app-bg)' }}>
       <Logo />
       <div className="flex flex-col items-center gap-4">
         <span
@@ -37,6 +37,6 @@ export function ErrorLayout({ code, title, description, icon }: ErrorLayoutProps
           Back to dashboard
         </Button>
       </div>
-    </div>
+    </main>
   )
 }

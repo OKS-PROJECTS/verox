@@ -87,9 +87,9 @@ export default function CalendarPage() {
 
         <Card>
           <CardHeader className="flex items-center justify-between">
-            <h3 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
+            <h2 className="text-[14px] font-medium" style={{ color: 'var(--app-fg)' }}>
               Month view
-            </h3>
+            </h2>
             <Button size="sm" variant="bordered" color="default" onClick={() => setMonth(new Date())}>
               Today
             </Button>
