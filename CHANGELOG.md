@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   menu headings and section titles, status colours, the active menu item and
   chat meta text.
 - Every page has a `<main>` landmark (app shell, auth and error screens).
+- The header's Quick create button shows only its icon below 640px, so the header no longer overflows on a phone.
 - Card titles use `h2` and the KPI value is no longer a heading, so heading
   order no longer skips a level.
 
