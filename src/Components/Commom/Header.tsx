@@ -70,7 +70,7 @@ export function Header({ onOpenMobileNav, onOpenSettings }: HeaderProps) {
           size="sm"
           placeholder="Quick search…"
           aria-label="Quick search"
-          startIcon={<span className="opacity-60">⌘K</span>}
+          startIcon={<span style={{ color: 'var(--app-fg-subtle)' }}>⌘K</span>}
         />
       </div>
 
