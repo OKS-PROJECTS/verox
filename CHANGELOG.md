@@ -5,7 +5,19 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
-> Requires oks-ui ^1.3.2
+> Requires oks-ui ^1.6.0
+
+## [1.0.2] — 2026-11-10
+
+### Changed
+
+- Updated to oks-ui `^1.6.0` (from `^1.3.2`).
+
+### Fixed
+
+- The "⌘K" hint in the header search was drawn at 60% opacity (2.4:1 in light, 3.1:1 in dark); it now uses the
+  subtle text colour. That colour is a shade darker in light mode so it, and the search placeholder, reach 4.5:1 on
+  the filled field (it was 4.46:1).
 
 ## [1.0.1] — 2026-10-04
 
